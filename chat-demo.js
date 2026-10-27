@@ -34,6 +34,7 @@
     'social-media-management': ['social media', 'posting', 'content calendar'],
     'branding': ['logo', 'brand', 'visual identity'],
     'creator-operations': ['onlyfans', 'creator', 'subscription creator'],
+    'digital-footprint-cleanup': ['remove my data', 'personal data', 'personal information', 'data broker', 'people search', 'opt out', 'search result', 'privacy', 'online footprint'],
     'job-tracker': ['job application', 'follow up', 'job tracker', 'job search'],
     'resume-it-support': ['resume', 'cover letter', 'help desk', 'it support'],
     'shipping-preflight': ['shipping', 'package', 'reseller', 'weight', 'dimensions'],
@@ -63,7 +64,7 @@
     if (!q) return;
     addMessage(q, 'visitor');
     input.value = '';
-    if (/who owns|my accounts|your accounts|my data/i.test(q)) {
+    if (/who owns|my accounts|your accounts/i.test(q)) {
       addMessage('Client builds are scoped in your accounts, with documentation and handover. The example here reads only the public catalog and stores no message.', 'assistant', { label: 'See service terms →', url: 'services.html' });
       return;
     }
