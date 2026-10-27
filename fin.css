@@ -207,7 +207,7 @@ footer{border-top:1px solid var(--ink);padding-top:clamp(44px,6vw,72px)}
 /* ---------- mobile contact bar ---------- */
 .mobile-cta{display:none}
 @media (max-width:860px){
-  body{padding-bottom:calc(58px + env(safe-area-inset-bottom,0px))}
+  body{padding-bottom:calc(59px + env(safe-area-inset-bottom, 0px))}
   .mobile-cta{
     display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;
     background:var(--paper);border-top:1px solid var(--ink);
