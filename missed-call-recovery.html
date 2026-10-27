@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--
+  SHOWROOM PAGE — Missed-Call Recovery (Illustrative Demo) · Published to themobleygroup.com Oct 27, 2026.
+  Built in-house by the Fleet, Oct 27, 2026, per showroom-spec.md §4 (scenario
+  simulation + numbers companion) + catalog-showroom-map.md. The scenario is
+  scripted and labeled simulated; the calculator demonstrates the calculator
+  CONCEPT with the visitor's own hypothetical inputs — it is not the deployed
+  calculator (deployment is a separate Nick decision), not a measurement, and
+  not a result. Nothing typed is stored or sent. Register: missed-call-text-back,
+  "Missed-call recovery (text-back + review automation)", by scope.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Missed-Call Recovery — Text-back &amp; review automation | The Mobley Group</title>
+<meta name="description" content="When a call is missed, an automatic text-back keeps the conversation alive, and a review request goes out after the job. Play the scenario, then run the illustrative calculator with your own numbers. Priced by written scope.">
+<link rel="canonical" href="https://themobleygroup.com/missed-call-recovery.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="The Mobley Group">
+<meta property="og:title" content="Missed-Call Recovery — The Mobley Group">
+<meta property="og:description" content="Automatic text-back for missed calls, plus review automation after the job. Scenario simulation and an illustrative calculator — no invented results.">
+<meta property="og:url" content="https://themobleygroup.com/missed-call-recovery.html"><meta property="og:image" content="https://themobleygroup.com/assets/og-image.png">
+<link rel="icon" type="image/png" href="assets/logo-monogram.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fin.css">
+<style>
+.label-chip{display:inline-flex;align-items:center;gap:8px;font:800 11px "Archivo",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);border:1.5px solid var(--teal);border-radius:999px;padding:6px 13px;background:#fff}
+.label-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.sample-line{font-size:13px;color:var(--mut);margin:10px 0 0}
+h2.sec{font:800 clamp(1.5rem,3vw,2.1rem)/1.15 "Archivo",sans-serif;margin:14px 0 12px;letter-spacing:-.01em}
+section.block{margin-top:clamp(48px,6vw,72px)}
+.demo-panel{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:clamp(22px,3.5vw,36px)}
+.chip-row{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding-bottom:16px;margin-bottom:20px}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.lane{border:1px solid var(--rule);border-radius:6px;padding:20px 22px;background:var(--paper)}
+.lane.auto{border-color:var(--teal);background:#fff}
+.lane h3{font:800 1.05rem "Archivo",sans-serif;margin:0 0 4px}
+.lane .lane-sub{font-size:13px;color:var(--mut);margin:0 0 14px}
+.step{display:grid;grid-template-columns:74px 1fr;gap:11px;padding:9px 0;border-top:1px solid var(--rule);font-size:14.5px;color:var(--ink-soft)}
+.step:first-of-type{border-top:none}
+.step .when{font:800 11px "Archivo",sans-serif;color:var(--teal);letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+.bubble{max-width:88%;border-radius:14px;padding:11px 14px;font-size:14.5px;margin-top:10px;line-height:1.5}
+.bubble.out{background:#E7EFEA;border-bottom-left-radius:4px;color:var(--ink-soft)}
+.bubble.in{background:var(--teal);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.bubble .who{display:block;font:700 10px "Archivo",sans-serif;letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-bottom:3px}
+.calc{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:14px;align-items:end;margin-top:6px}
+label.f{display:grid;gap:7px;font:700 13.5px "Archivo",sans-serif}
+label.f input{font:400 15.5px "Inter",sans-serif;color:var(--ink);border:1px solid #B9B9AE;border-radius:4px;background:var(--paper);padding:11px 13px;width:100%}
+label.f input:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offset:1px}
+.calc-out{border-left:5px solid var(--teal);padding:4px 0 4px 18px}
+.calc-out b{display:block;font:800 1.9rem "Archivo",sans-serif;color:var(--teal)}
+.calc-out span{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:42px}
+.split h2{font:800 1.5rem/1.15 "Archivo",sans-serif;margin:0 0 12px}
+.split ul{padding-left:21px}.split p,.split li{color:var(--ink-soft)}
+.cta-box{padding:clamp(26px,4vw,40px);border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+.cta-box .small{font-size:.83rem;color:var(--mut)}
+@media(max-width:900px){.calc{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.lanes,.split{grid-template-columns:1fr}.calc{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap masthead">
+    <a class="lockup" href="index.html" aria-label="The Mobley Group — home">
+      <span class="mono"><svg viewBox="0 0 30 26" fill="none" aria-hidden="true"><path d="M5 21V9l5.5 7L16 9v12" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5" cy="21" r="2" fill="#E8A33D"/><circle cx="16" cy="21" r="2" fill="#E8A33D"/><circle cx="10.5" cy="16" r="2" fill="#fff"/><circle cx="21" cy="6" r="1.8" fill="#fff"/><path d="M24.3 2.7a4.6 4.6 0 0 1 0 6.6" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round"/><path d="M26.9 .6a8.4 8.4 0 0 1 0 10.8" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round" opacity=".55"/></svg></span>
+      <span class="word">The Mobley Group<small>Systems · Automation · Web</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="products.html">Products</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="las-vegas.html">Las Vegas</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+      <a class="cta" href="mailto:nick@themobleygroup.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap hero">
+  <p class="eyebrow">Automation services · Built by Mobley Labs — a Mobley Group studio</p>
+  <h1 class="mega">A missed call doesn't have to be <span class="t">a lost customer.</span></h1>
+  <p class="lede">The moment a call goes unanswered, an automatic text-back keeps the conversation alive — and after the job is done, a review request goes out while the work is still fresh. Set up on your business number, worded in your voice, scoped in writing.</p>
+</div>
+
+<div class="wrap">
+  <section class="block" aria-labelledby="who-h" style="margin-top:clamp(40px,5vw,64px)">
+    <h2 class="sec" id="who-h" style="margin-top:0">Who it's for — and the problem it solves</h2>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0 0 10px"><strong>Who it's for:</strong> owner-run businesses where the phone rings while hands are busy — salons, clinics, shops, and field-service teams that can't always reach it.</p>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0"><strong>The problem:</strong> a missed call usually means the caller tries the next business. A prompt, polite text-back keeps the conversation — and the booking — with you, and gives your team the caller's need in writing when they pick it up.</p>
+  </section>
+
+  <section class="block" aria-labelledby="demo-h" style="margin-top:clamp(40px,5vw,64px)">
+    <span class="label-chip">Illustrative Demo</span>
+    <h2 class="sec" id="demo-h">Tuesday, 10:14 a.m. You're with a client. The phone rings.</h2>
+    <p style="color:var(--ink-soft);max-width:70ch;margin:0">A fictional Henderson salon, a fictional caller. Play the same missed call down both lanes — what usually happens, and what the setup does instead.</p>
+    <p class="sample-line"><strong>Sample data · Explore the experience.</strong> A scripted simulation. No text is actually sent, no number is connected, and nothing you type is captured or stored.</p>
+
+    <div class="demo-panel" style="margin-top:24px">
+      <div class="chip-row">
+        <span class="label-chip">Illustrative Demo · Simulated</span>
+        <span style="font-size:13px;color:var(--mut)">Fictional business: Desert Bloom Salon (fictional)</span>
+      </div>
+      <div class="lanes">
+        <div class="lane" aria-label="What usually happens">
+          <h3>What usually happens</h3>
+          <p class="lane-sub">The missed call, left to chance:</p>
+          <div class="step"><span class="when">10:14</span><span>The call rings out — everyone is with a client.</span></div>
+          <div class="step"><span class="when">10:15</span><span>The caller hears voicemail. Some leave a message; many just dial the next salon on the list.</span></div>
+          <div class="step"><span class="when">12:40</span><span>At a break, someone returns the call. If it connects, the conversation restarts from zero.</span></div>
+          <div class="step"><span class="when">Later</span><span>After the appointment that did happen, nobody asks for a review — the moment passed.</span></div>
+        </div>
+        <div class="lane auto" aria-label="With missed-call recovery">
+          <h3>With missed-call recovery set up</h3>
+          <p class="lane-sub">The same call, answered by text in the moment:</p>
+          <div class="step"><span class="when">10:14</span><span>The call is missed — and the text-back goes out automatically, in the salon's name and wording.</span></div>
+          <div>
+            <div class="bubble out"><span class="who">Text-back · automatic</span>Sorry we missed your call — this is Desert Bloom Salon. What can we help you book?</div>
+            <div class="bubble in"><span class="who">Caller</span>Hi! Anything open Thursday afternoon for a cut?</div>
+            <div class="bubble out"><span class="who">Text-back</span>Thanks — we've flagged Thursday afternoon for the team, and they'll confirm the exact time with you here.</div>
+          </div>
+          <div class="step"><span class="when">12:40</span><span>The team picks up a live thread with the details attached — not a cold callback.</span></div>
+          <div class="step"><span class="when">After</span><span>Once the appointment is complete, a review request goes out automatically — written in the salon's voice, timed while the visit is fresh.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="calc-h">
+    <span class="label-chip">Illustrative Demo</span>
+    <h2 class="sec" id="calc-h">Run your own rough numbers</h2>
+    <p style="color:var(--ink-soft);max-width:70ch;margin:0 0 20px">Three guesses of yours and one multiplication. Change any number — the output changes with it, because the output is only ever your inputs.</p>
+    <div class="demo-panel">
+      <div class="calc">
+        <label class="f">Missed calls per week
+          <input id="k-missed" type="number" min="0" max="10000" value="12">
+        </label>
+        <label class="f">Share that might have booked (%)
+          <input id="k-share" type="number" min="0" max="100" value="25">
+        </label>
+        <label class="f">Average value of a booking ($)
+          <input id="k-value" type="number" min="0" max="100000" value="85">
+        </label>
+        <div class="calc-out" aria-live="polite"><b id="k-out">$1,105</b><span>per month, at your guesses</span></div>
+      </div>
+      <p class="sample-line" style="margin-top:18px"><strong>Illustrative calculator.</strong> This demonstrates the calculator concept with hypothetical math on your own inputs. It is not a measurement of your business, not a forecast, and not a result any client has reported — it cannot know your numbers; only your phone bill and your books can.</p>
+    </div>
+  </section>
+
+  <div class="split block">
+    <section aria-labelledby="inc-h">
+      <h2 id="inc-h">What a setup includes</h2>
+      <ul>
+        <li>Automatic text-back to missed callers, in your business's name and approved wording</li>
+        <li>Reply handling that captures what the caller needs and routes it to you or your team</li>
+        <li>Review-request automation after a completed job — your wording, your timing</li>
+        <li>Setup on your number and your accounts, with the messaging registrations the carriers require handled as part of the scope</li>
+        <li>Handover documentation: the wording, the rules, and how to change them</li>
+      </ul>
+    </section>
+    <section aria-labelledby="limits-h">
+      <h2 id="limits-h">Support and limitations</h2>
+      <ul>
+        <li><strong>It starts conversations; people finish them.</strong> The text-back buys the caller a reply in the moment — your team still does the booking and the work.</li>
+        <li><strong>Messaging has rules.</strong> Consent, opt-outs, and carrier registration are part of a proper setup and are scoped in writing, not waved at.</li>
+        <li><strong>No promised recovery rate.</strong> Anyone who guarantees how many callers a text-back will convert is inventing a number. The calculator above is honest for a reason: your mileage is yours.</li>
+        <li><strong>Consent and opt-out are built in.</strong> Automated texts go to people who called your business, carry the required opt-out handling, and stop when someone opts out — the messaging rules are part of the setup, not an afterthought.</li>
+        <li><strong>Priced by scope.</strong> The setup is quoted in writing against your number, your call volume, and the flows you want — no shelf price.</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="block" aria-labelledby="launch-h">
+    <h2 class="sec" id="launch-h" style="margin-top:0">What you'll need to launch</h2>
+    <ul>
+      <li><strong>A compatible phone setup (required).</strong> Most small-business lines and carriers can support missed-call text-back; your written scope confirms compatibility with your number and carrier before anything is built.</li>
+      <li><strong>A messaging provider account (required).</strong> Texts are sent through a messaging provider under your account; the account is registered properly (including carrier registration) as part of the setup.</li>
+      <li><strong>Messaging charges (scope-dependent).</strong> Per-message and number fees are the provider's, paid by you directly, and scale with how many texts are sent. Your scope estimates them at your call volume.</li>
+      <li><strong>Your follow-up owner (required).</strong> A person or team who works the replies — the automation starts the conversation, your people finish it.</li>
+    </ul>
+    <p style="color:var(--ink-soft);max-width:72ch"><em>“No surprise platform costs. Before work begins, we'll explain any required third-party accounts, subscriptions, usage charges, or publishing fees. Where practical, these accounts are established in your name so you retain control.”</em></p>
+  </section>
+
+  <section class="block" aria-labelledby="pricing-h">
+    <h2 class="sec" id="pricing-h" style="margin-top:0">Pricing and ongoing costs</h2>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0 0 10px"><strong>The setup is priced by written scope</strong> against your number, your call volume, and the flows you want — no shelf price.</p><p style="color:var(--ink-soft);max-width:72ch;margin:0"><strong>Ongoing costs:</strong> the messaging provider's per-message and number fees, paid by you to the provider. Review-request automation, if your scope includes it, runs on the same rails.</p>
+  </section>
+
+  <section class="block" aria-labelledby="own-h">
+    <h2 class="sec" id="own-h" style="margin-top:0">Ownership, handover, and support</h2>
+    <ul>
+      <li><strong>Yours:</strong> the number, the provider account, the message templates, and the conversation records they produce.</li>
+      <li><strong>Handover includes:</strong> documentation of the flows, the templates, and how to change wording or pause the automation.</li>
+      <li><strong>Scope and changes:</strong> new flows or new numbers are new written scopes, priced before they are built.</li>
+      <li><strong>Support.</strong> If something we delivered doesn't do what the written scope says, we fix it — that's a defect, not a new request. Anything beyond the scope is quoted in writing before work begins.</li>
+      <li><strong>If we part ways:</strong> the setup keeps running on your accounts; only our optional support ends.</li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="cta-h">
+    <div class="cta-box" style="padding:clamp(26px,4vw,40px);border:1px solid var(--rule);border-radius:6px;background:var(--panel)">
+      <h2 id="cta-h" style="font:800 1.5rem/1.15 'Archivo',sans-serif;margin:0 0 10px">Let's build yours</h2>
+      <p style="color:var(--ink-soft);max-width:65ch;margin:0 0 18px">Tell us your business, your busiest hours, and roughly how many calls go unanswered in a week. We will reply with whether missed-call recovery fits — and if it does, a written scope and price before any work begins.</p>
+      <a class="btn btn-solid" href="mailto:nick@themobleygroup.com?subject=Missed-call%20recovery%20%E2%80%94%20inquiry">Email about missed-call recovery →</a>
+      <p class="small" style="font-size:.83rem;color:var(--mut);margin-top:14px">Please do not send customer phone lists or account credentials in the first email.</p>
+    </div>
+  </section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-lock">
+          <span class="mono"><svg viewBox="0 0 30 26" fill="none" aria-hidden="true"><path d="M5 21V9l5.5 7L16 9v12" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5" cy="21" r="2" fill="#E8A33D"/><circle cx="16" cy="21" r="2" fill="#E8A33D"/><circle cx="10.5" cy="16" r="2" fill="#fff"/><circle cx="21" cy="6" r="1.8" fill="#fff"/><path d="M24.3 2.7a4.6 4.6 0 0 1 0 6.6" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round"/><path d="M26.9 .6a8.4 8.4 0 0 1 0 10.8" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round" opacity=".55"/></svg></span>
+          <span class="word">The Mobley Group<small>Systems · Automation · Web</small></span>
+        </div>
+        <p class="foot-tag">The Mobley Group — systems, automation, and websites for small businesses. Built in your accounts, documented, and handed over with the keys.</p>
+      </div>
+      <nav class="foot-nav" aria-label="Footer">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="catalog.html">Full catalog</a></li>
+          <li><a href="las-vegas.html">Las Vegas &amp; Henderson</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+      <div class="foot-meta">
+        Las Vegas / Henderson, Nevada<br>
+        <a href="mailto:nick@themobleygroup.com">nick@themobleygroup.com</a><br>
+        Call or text: <a href="tel:+17739696425">(773) 969-6425</a><br>
+        Mobley Labs — a Mobley Group studio
+      </div>
+    </div>
+    <div class="foot-legal">
+      <div>
+        <div class="legal-name">The Mobley Group</div>
+        <div class="legal-rule"></div>
+        <div class="legal-line">© 2026 The Mobley Group · <a href="mailto:nick@themobleygroup.com">nick@themobleygroup.com</a></div>
+      </div>
+      <div class="legal-place">Las Vegas NV</div>
+    </div>
+  </div>
+</footer>
+<div class="mobile-cta"><a href="mailto:nick@themobleygroup.com?subject=Missed-call%20recovery%20%E2%80%94%20inquiry">Email the studio</a><a href="catalog.html">Browse catalog</a></div>
+<script>
+'use strict';
+/* Illustrative calculator — the visitor's own hypothetical inputs, plain math. */
+function calc(){let m=Math.max(0,Number(document.querySelector('#k-missed').value)||0),s=Math.min(100,Math.max(0,Number(document.querySelector('#k-share').value)||0)),v=Math.max(0,Number(document.querySelector('#k-value').value)||0);
+ let out=m*(s/100)*v*52/12;document.querySelector('#k-out').textContent='$'+Math.round(out).toLocaleString('en-US')}
+['#k-missed','#k-share','#k-value'].forEach(id=>document.querySelector(id).addEventListener('input',calc));calc();
+</script>
+</body></html>
