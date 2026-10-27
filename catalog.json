@@ -12,7 +12,7 @@
   "services": [
     {
       "id": "voice-receptionist",
-      "name": "AI voice receptionist",
+      "name": "AI Voice Receptionist",
       "status": "available_by_scope",
       "group": "Small business",
       "audience": "Businesses that miss calls while working or after hours",
@@ -30,7 +30,7 @@
     },
     {
       "id": "n8n-automation",
-      "name": "Workflow automation",
+      "name": "Workflow Automation",
       "status": "available_by_scope",
       "group": "Small business",
       "audience": "Teams moving leads or records between tools by hand",
@@ -48,7 +48,7 @@
     },
     {
       "id": "ai-website-assistant",
-      "name": "AI website assistant",
+      "name": "AI Website Assistant",
       "status": "available_by_scope",
       "group": "Small business",
       "audience": "Businesses whose visitors have repeated questions before contacting them",
@@ -67,7 +67,7 @@
     },
     {
       "id": "missed-call-text-back",
-      "name": "Missed-call recovery",
+      "name": "Missed-Call Recovery",
       "status": "available_by_scope",
       "group": "Small business",
       "audience": "Service businesses with missed inbound calls",
@@ -85,7 +85,7 @@
     },
     {
       "id": "website-builds",
-      "name": "Website builds",
+      "name": "Website Builds",
       "status": "available_by_scope",
       "group": "Small business",
       "audience": "Businesses that need a clear site they control",
@@ -103,7 +103,7 @@
     },
     {
       "id": "social-media-management",
-      "name": "Social media management",
+      "name": "Social Media Management",
       "status": "available_by_scope",
       "group": "Small business",
       "audience": "Businesses that need consistent, approved posts",
@@ -121,7 +121,7 @@
     },
     {
       "id": "branding",
-      "name": "Brand identity",
+      "name": "Brand Identity",
       "status": "available_by_scope",
       "group": "Small business",
       "audience": "Businesses needing consistent visual assets",
@@ -139,7 +139,7 @@
     },
     {
       "id": "digital-footprint-cleanup",
-      "name": "Digital footprint cleanup",
+      "name": "Digital Footprint Cleanup",
       "status": "available_by_scope",
       "group": "Personal privacy",
       "audience": "People who want to reduce public exposure of personal information",
@@ -158,7 +158,7 @@
     },
     {
       "id": "smart-remote-hands",
-      "name": "Smart remote hands",
+      "name": "Smart Remote Hands",
       "status": "available_by_scope",
       "group": "Field services",
       "audience": "Teams with equipment in Las Vegas-area facilities who need trusted on-site hands",
@@ -179,7 +179,7 @@
     },
     {
       "id": "creator-operations",
-      "name": "Creator operations, including OnlyFans",
+      "name": "Creator Operations",
       "status": "pilot_inquiry",
       "group": "Creator pilot",
       "audience": "Adult creators who want help organizing their business",
