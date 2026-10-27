@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--
+  SHOWROOM PAGE — SitterSheet (Shipped Product) · Published to themobleygroup.com Oct 27, 2026.
+  Built in-house by the Fleet, Oct 27, 2026, per showroom-spec.md + catalog-showroom-map.md.
+  Demo = preview on fictional data: the product's core math (session hours × rate)
+  and a log → report flow mirroring the product's described functions. It is NOT the
+  complete released application and exports nothing. Purchase link verified against
+  the canonical register: nickmobley.gumroad.com/l/sittersheet ($14.99).
+  Local-first wording carries the security-QA qualifier (Android / Firebase Analytics)
+  verbatim in substance.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SitterSheet — Log sittings, track pay, export the report | The Mobley Group</title>
+<meta name="description" content="SitterSheet is a shipped, local-first app for sitters: log a sitting session, calculate pay, keep notes, and produce a clean report. $14.99 lifetime on Gumroad. Try the preview on fictional data.">
+<link rel="canonical" href="https://themobleygroup.com/sittersheet.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="The Mobley Group">
+<meta property="og:title" content="SitterSheet — The Mobley Group">
+<meta property="og:description" content="A local-first sitting log that does the pay math and writes the report. Shipped product, $14.99 lifetime.">
+<meta property="og:url" content="https://themobleygroup.com/sittersheet.html"><meta property="og:image" content="https://themobleygroup.com/assets/og-image.png">
+<link rel="icon" type="image/png" href="assets/logo-monogram.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fin.css">
+<style>
+.label-chip{display:inline-flex;align-items:center;gap:8px;font:800 11px "Archivo",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);border:1.5px solid var(--teal);border-radius:999px;padding:6px 13px;background:#fff}
+.label-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.sample-line{font-size:13px;color:var(--mut);margin:10px 0 0}
+.demo-panel{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:clamp(22px,3.5vw,36px);position:relative}
+.demo-panel .chip-row{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding-bottom:16px;margin-bottom:20px}
+.demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,44px)}
+.demo-grid h3{font:800 1.15rem "Archivo",sans-serif;margin:0 0 6px}
+.demo-grid p{color:var(--ink-soft);font-size:15px}
+label.f{display:grid;gap:7px;font:700 13.5px "Archivo",sans-serif;margin-top:14px}
+label.f input,label.f textarea{font:400 15.5px "Inter",sans-serif;color:var(--ink);border:1px solid #B9B9AE;border-radius:4px;background:var(--paper);padding:11px 13px;width:100%}
+label.f input:focus,label.f textarea:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offset:1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.session{border:1px solid var(--rule);border-radius:6px;padding:13px 15px;margin-top:11px;background:var(--paper)}
+.session b{font-family:"Archivo",sans-serif}
+.session .meta{color:var(--mut);font-size:13.5px}
+.session .note{color:var(--ink-soft);font-size:14px;margin-top:4px}
+.totals{display:flex;gap:26px;flex-wrap:wrap;margin-top:18px;border-top:1px solid var(--rule);padding-top:16px}
+.totals div b{display:block;font:800 1.45rem "Archivo",sans-serif;color:var(--teal)}
+.totals div span{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.report-box{white-space:pre-wrap;font:400 13.5px/1.65 ui-monospace,"SF Mono",Menlo,monospace;background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:16px 18px;margin-top:14px;color:var(--ink-soft)}
+.buy-box{padding:28px;border:1px solid var(--rule);border-radius:6px;background:var(--panel);border-left:5px solid var(--teal)}
+.fineprint{font-size:13px;color:var(--mut);max-width:75ch}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:42px}
+.split h2{font:800 1.5rem/1.15 "Archivo",sans-serif;margin:0 0 12px}
+.split ul{padding-left:21px}.split p,.split li{color:var(--ink-soft)}
+section.block{margin-top:clamp(48px,6vw,72px)}
+h2.sec{font:800 clamp(1.5rem,3vw,2.1rem)/1.15 "Archivo",sans-serif;margin:14px 0 12px;letter-spacing:-.01em}
+@media(max-width:820px){.demo-grid,.split{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"SitterSheet","description":"A local-first app for sitters: log sitting sessions, calculate pay, manage notes, and export a report.","brand":{"@type":"Brand","name":"Mobley Labs"},"offers":{"@type":"Offer","url":"https://nickmobley.gumroad.com/l/sittersheet","price":"14.99","priceCurrency":"USD","availability":"https://schema.org/InStock"},"seller":{"@type":"Organization","name":"The Mobley Group"}}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap masthead">
+    <a class="lockup" href="index.html" aria-label="The Mobley Group — home">
+      <span class="mono"><svg viewBox="0 0 30 26" fill="none" aria-hidden="true"><path d="M5 21V9l5.5 7L16 9v12" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5" cy="21" r="2" fill="#E8A33D"/><circle cx="16" cy="21" r="2" fill="#E8A33D"/><circle cx="10.5" cy="16" r="2" fill="#fff"/><circle cx="21" cy="6" r="1.8" fill="#fff"/><path d="M24.3 2.7a4.6 4.6 0 0 1 0 6.6" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round"/><path d="M26.9 .6a8.4 8.4 0 0 1 0 10.8" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round" opacity=".55"/></svg></span>
+      <span class="word">The Mobley Group<small>Systems · Automation · Web</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html" aria-current="page">Products</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="las-vegas.html">Las Vegas</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+      <a class="cta" href="mailto:nick@themobleygroup.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap hero">
+  <p class="eyebrow">Digital products · Built by Mobley Labs — a Mobley Group studio</p>
+  <h1 class="mega">Log the sitting. <span class="t">SitterSheet does the math.</span></h1>
+  <p class="lede">SitterSheet is a local-first app for babysitters and pet sitters: record a session, let it calculate the pay, keep the notes that matter, and hand the family a clean report. It is a shipped product — built, released, and sold today for $14.99, once, lifetime.</p>
+  <div class="hero-cta">
+    <a class="btn btn-solid" href="https://nickmobley.gumroad.com/l/sittersheet">Buy SitterSheet — $14.99 →</a>
+    <a class="btn" href="#demo">Try the preview first</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <!-- §2.3–2.5 · Interactive demonstration (preview) + label -->
+  <section class="block" aria-labelledby="who-h" style="margin-top:clamp(40px,5vw,64px)">
+    <h2 class="sec" id="who-h" style="margin-top:0">Who it's for — and the problem it solves</h2>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0 0 10px"><strong>Who it's for:</strong> babysitters, nannies, and pet sitters who want a clean record of every sitting and what it paid — without a subscription, an account, or a spreadsheet.</p>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0"><strong>The problem:</strong> sitting records end up scattered across notes apps, texts, and memory. At payment time — or tax time — reconstructing hours and rates is guesswork. SitterSheet keeps the log and the math in one place, on your device, and turns it into a tidy report.</p>
+  </section>
+
+  <section class="block" id="demo" aria-labelledby="demo-h" style="margin-top:clamp(40px,5vw,64px)">
+    <span class="label-chip">Shipped Product</span>
+    <h2 class="sec" id="demo-h">Try the core of it, on a fictional family</h2>
+    <p style="color:var(--ink-soft);max-width:70ch;margin:0">This preview runs SitterSheet's core math — session hours × your rate — and walks the same log → report flow the full product uses. The family, the sitter, and every session below are fictional.</p>
+    <p class="sample-line"><strong>Sample data · Explore the experience.</strong> Nothing you type is submitted or stored; it lives only in this tab.</p>
+
+    <div class="demo-panel" style="margin-top:24px">
+      <div class="chip-row">
+        <span class="label-chip">Shipped Product · Preview</span>
+        <span class="note" style="font-size:13px;color:var(--mut)">Preview — not the complete released application</span>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <h3>Log a sample session</h3>
+          <p>Add a sitting for the fictional Sample Family and watch the totals move.</p>
+          <form id="session-form">
+            <label class="f">Family (fictional)
+              <input id="f-family" type="text" maxlength="40" value="The Sample Family" autocomplete="off">
+            </label>
+            <div class="two">
+              <label class="f">Date
+                <input id="f-date" type="date" value="2026-10-24">
+              </label>
+              <label class="f">Rate ($/hour)
+                <input id="f-rate" type="number" min="0" max="500" step="0.25" value="18">
+              </label>
+            </div>
+            <div class="two">
+              <label class="f">Start
+                <input id="f-start" type="time" value="17:30">
+              </label>
+              <label class="f">End
+                <input id="f-end" type="time" value="21:00">
+              </label>
+            </div>
+            <label class="f">Note
+              <input id="f-note" type="text" maxlength="90" value="Dinner, homework, bedtime at 8:30." autocomplete="off">
+            </label>
+            <button class="btn btn-solid" type="submit" style="margin-top:18px;cursor:pointer">Add sample session</button>
+          </form>
+          <div class="totals" aria-live="polite">
+            <div><b id="t-sessions">0</b><span>Sessions</span></div>
+            <div><b id="t-hours">0.00</b><span>Total hours</span></div>
+            <div><b id="t-pay">$0.00</b><span>Estimated pay</span></div>
+          </div>
+        </div>
+        <div>
+          <h3>Your sample log</h3>
+          <div id="session-list"></div>
+          <h3 style="margin-top:26px">Quick pay estimator</h3>
+          <p>Straight from the product's core math: minutes × rate. It is an estimator, not the complete released application.</p>
+          <div class="two">
+            <label class="f">Minutes worked
+              <input id="q-minutes" type="number" min="0" max="99999" value="90">
+            </label>
+            <label class="f">Hourly rate ($)
+              <input id="q-rate" type="number" min="0" max="500" step="0.25" value="18">
+            </label>
+          </div>
+          <p style="margin-top:14px">Estimated pay: <strong id="q-pay" style="font:800 1.3rem 'Archivo',sans-serif;color:var(--teal)">$27.00</strong></p>
+          <h3 style="margin-top:26px">Preview the report</h3>
+          <p>The full product exports a report like this one. This preview generates the same shape on your sample sessions — and exports nothing.</p>
+          <button class="btn" id="report-btn" type="button" style="cursor:pointer;background:none">Generate sample report</button>
+          <div class="report-box" id="report" hidden></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- §2.7 · Let's build yours → the product itself -->
+  <section class="block" aria-labelledby="buy-h">
+    <div class="buy-box">
+      <span class="label-chip">Shipped Product</span>
+      <h2 id="buy-h" style="font:800 1.5rem/1.15 'Archivo',sans-serif;margin:14px 0 10px">The full product is $14.99 — once, not monthly</h2>
+      <p style="color:var(--ink-soft);max-width:70ch;margin:0 0 18px">One payment, lifetime use. In the full product: start-and-stop session logging per family, pay calculated as you go, notes attached to each sitting, your rates kept on file, and a finished report you can export and send. The first report is free; the app is local-first — your records live on your device, under your control.</p>
+      <a class="btn btn-solid" href="https://nickmobley.gumroad.com/l/sittersheet">Buy SitterSheet on Gumroad →</a>
+      <p class="sample-line">Sold and delivered through Gumroad. Questions before you buy: <a href="mailto:nick@themobleygroup.com?subject=SitterSheet%20%E2%80%94%20question" style="color:var(--teal);font-weight:600">email the studio</a>.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="launch-h">
+    <h2 class="sec" id="launch-h" style="margin-top:0">What you'll need to launch</h2>
+    <ul>
+      <li><strong>Nothing but the product (required).</strong> A one-time $14.99 purchase through Gumroad — no account with us, no subscription, no in-app purchases.</li>
+      <li><strong>A device you already have (required).</strong> An Android phone, or any device with a modern browser for the web build.</li>
+      <li><strong>No third-party accounts (none).</strong> SitterSheet needs no store enrollment, hosting, or services in your name to run.</li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="pricing-h">
+    <h2 class="sec" id="pricing-h" style="margin-top:0">Pricing and ongoing costs</h2>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0"><strong>$14.99, once.</strong> There are no ongoing costs from us: no monthly fee, no renewal, no usage charges. The optional care-plan and by-scope pricing on our service pages do not apply to this product.</p>
+  </section>
+
+  <section class="block" aria-labelledby="own-h">
+    <h2 class="sec" id="own-h" style="margin-top:0">Ownership, handover, and support</h2>
+    <ul>
+      <li><strong>Yours:</strong> the app, yours to keep using, and every record you enter — stored on your device, exportable as reports you control.</li>
+      <li><strong>Handover:</strong> delivery is the Gumroad download plus the in-app report export; there is no server copy for us to hand over.</li>
+      <li><strong>Support.</strong> Product questions go to the support page or by email; if the product doesn't do what this page describes, tell us and we'll make it right or refund per the support page.</li>
+      <li><strong>If you stop using it:</strong> nothing is owed and nothing is held — your exported reports remain yours.</li>
+    </ul>
+  </section>
+
+  <div class="split block">
+    <section aria-labelledby="local-h">
+      <h2 id="local-h">Local-first, stated precisely</h2>
+      <p>SitterSheet is described as local-first, and the entered data backs that up: the sittings, notes, and pay records you type in stay on your device — there is no SitterSheet cloud copy of them, and nothing in the product sends your records to us.</p>
+      <p class="fineprint">One thing worth knowing, stated plainly: the Android build initializes Firebase Analytics, so a strict "no servers anywhere" reading would be looser than the shipped behavior. Analytics is anonymous usage measurement — it is not your sitting records, which stay on-device. If that distinction matters to you, it should; that's why it's written here and not buried.</p>
+    </section>
+    <section aria-labelledby="fit-h">
+      <h2 id="fit-h">Who it's for — and the limits</h2>
+      <ul>
+        <li><strong>For:</strong> babysitters, nannies, and pet sitters who keep their records in a notes app, a group chat, or their head — and want the pay math and the report done for them.</li>
+        <li><strong>Not:</strong> an agency platform. SitterSheet doesn't find you clients, process payments, or sync a team — it keeps one sitter's records straight.</li>
+        <li><strong>The preview's limit:</strong> this page demonstrates the core math and the log → report flow. The complete released application is what the Gumroad purchase delivers.</li>
+        <li><strong>Compatibility:</strong> SitterSheet runs as an Android app and as a self-contained web build that works in a modern browser — no account to create and nothing to install for the web version.</li>
+        <li><strong>Your records, your backup:</strong> because records live on your device, exporting a report is also your backup. If a device is lost before you export, its log goes with it — the app makes no cloud copy.</li>
+        <li><strong>Pay math, not tax filing:</strong> SitterSheet totals hours and pay for your own records. It does not calculate taxes or withholdings and files nothing — household-employer tax questions belong with a tax professional.</li>
+      </ul>
+    </section>
+  </div>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-lock">
+          <span class="mono"><svg viewBox="0 0 30 26" fill="none" aria-hidden="true"><path d="M5 21V9l5.5 7L16 9v12" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5" cy="21" r="2" fill="#E8A33D"/><circle cx="16" cy="21" r="2" fill="#E8A33D"/><circle cx="10.5" cy="16" r="2" fill="#fff"/><circle cx="21" cy="6" r="1.8" fill="#fff"/><path d="M24.3 2.7a4.6 4.6 0 0 1 0 6.6" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round"/><path d="M26.9 .6a8.4 8.4 0 0 1 0 10.8" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round" opacity=".55"/></svg></span>
+          <span class="word">The Mobley Group<small>Systems · Automation · Web</small></span>
+        </div>
+        <p class="foot-tag">The Mobley Group — systems, automation, and websites for small businesses. Built in your accounts, documented, and handed over with the keys.</p>
+      </div>
+      <nav class="foot-nav" aria-label="Footer">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="catalog.html">Full catalog</a></li>
+          <li><a href="las-vegas.html">Las Vegas &amp; Henderson</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+      <div class="foot-meta">
+        Las Vegas / Henderson, Nevada<br>
+        <a href="mailto:nick@themobleygroup.com">nick@themobleygroup.com</a><br>
+        Call or text: <a href="tel:+17739696425">(773) 969-6425</a><br>
+        Mobley Labs — a Mobley Group studio
+      </div>
+    </div>
+    <div class="foot-legal">
+      <div>
+        <div class="legal-name">The Mobley Group</div>
+        <div class="legal-rule"></div>
+        <div class="legal-line">© 2026 The Mobley Group · <a href="mailto:nick@themobleygroup.com">nick@themobleygroup.com</a></div>
+      </div>
+      <div class="legal-place">Las Vegas NV</div>
+    </div>
+  </div>
+</footer>
+<div class="mobile-cta"><a href="https://nickmobley.gumroad.com/l/sittersheet">Buy — $14.99</a><a href="#demo">Try the preview</a></div>
+<script>
+'use strict';
+/* SitterSheet preview — fictional data only, everything escaped, nothing stored or sent. */
+function escapeHTML(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function money(n){return '$'+n.toFixed(2)}
+let sessions=[
+ {family:'The Sample Family',date:'2026-10-21',start:'18:00',end:'22:30',rate:18,note:'Pizza night; kids asleep by 9.'},
+ {family:'The Sample Family',date:'2026-10-23',start:'09:00',end:'13:15',rate:18,note:'Park trip; dog walked twice.'}
+];
+function hoursOf(s){let[a,b]=[s.start,s.end].map(t=>{let[h,m]=t.split(':').map(Number);return h*60+m});let d=b-a;if(d<0)d+=1440;return d/60}
+function render(){let list=document.querySelector('#session-list');list.innerHTML=sessions.map(s=>{let h=hoursOf(s);return `<div class="session"><b>${escapeHTML(s.family)}</b> <span class="meta">· ${escapeHTML(s.date)} · ${escapeHTML(s.start)}–${escapeHTML(s.end)}</span><div class="meta">${h.toFixed(2)} hrs × ${money(Number(s.rate))}/hr = <b>${money(h*Number(s.rate))}</b></div>${s.note?`<div class="note">${escapeHTML(s.note)}</div>`:''}</div>`}).join('')||'<p class="note">No sessions yet — add one.</p>';
+ let th=sessions.reduce((a,s)=>a+hoursOf(s),0),tp=sessions.reduce((a,s)=>a+hoursOf(s)*Number(s.rate),0);
+ document.querySelector('#t-sessions').textContent=sessions.length;document.querySelector('#t-hours').textContent=th.toFixed(2);document.querySelector('#t-pay').textContent=money(tp)}
+document.querySelector('#session-form').addEventListener('submit',e=>{e.preventDefault();sessions.push({family:document.querySelector('#f-family').value||'The Sample Family',date:document.querySelector('#f-date').value,start:document.querySelector('#f-start').value,end:document.querySelector('#f-end').value,rate:Number(document.querySelector('#f-rate').value)||0,note:document.querySelector('#f-note').value});render()});
+function quick(){let m=Math.max(0,Number(document.querySelector('#q-minutes').value)||0),r=Math.max(0,Number(document.querySelector('#q-rate').value)||0);document.querySelector('#q-pay').textContent=money(m/60*r)}
+document.querySelector('#q-minutes').addEventListener('input',quick);document.querySelector('#q-rate').addEventListener('input',quick);
+document.querySelector('#report-btn').addEventListener('click',()=>{let box=document.querySelector('#report');let th=sessions.reduce((a,s)=>a+hoursOf(s),0),tp=sessions.reduce((a,s)=>a+hoursOf(s)*Number(s.rate),0);
+ box.textContent='SITTER REPORT — SAMPLE (FICTIONAL DATA)\nGenerated by the SitterSheet page preview — not an exported file.\n\n'+sessions.map(s=>`${s.date} · ${s.family}\n  ${s.start}–${s.end} · ${hoursOf(s).toFixed(2)} hrs × ${money(Number(s.rate))}/hr = ${money(hoursOf(s)*Number(s.rate))}${s.note?'\n  Note: '+s.note:''}`).join('\n')+`\n\nTOTAL · ${sessions.length} sessions · ${th.toFixed(2)} hours · ${money(tp)}`;
+ box.hidden=false});
+render();quick();
+</script>
+</body></html>
