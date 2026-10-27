@@ -13,29 +13,27 @@
 <link rel="icon" type="image/png" href="assets/logo-monogram.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="fin.css">
 <style>
-.privacy-page{padding:48px 0 76px}
-.privacy-page h2{font:800 clamp(1.5rem,3vw,2.1rem)/1.15 "Archivo",sans-serif;margin-bottom:15px}
+.privacy-page{padding:10px 0 76px}
+.privacy-page h2{font:800 clamp(1.5rem,3vw,2.1rem)/1.15 "Archivo",sans-serif;margin-bottom:15px;letter-spacing:-.01em}
 .privacy-page p,.privacy-page li{color:var(--ink-soft)}
-.privacy-page a{font-weight:700}
+.privacy-page a{font-weight:700;color:var(--teal)}
 .privacy-lead{max-width:70ch;font-size:1.07rem}
 .privacy-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:26px 0 58px}
-.privacy-step{padding:25px;border:1px solid var(--grid);border-radius:17px;background:#fff;box-shadow:var(--shadow)}
+.privacy-step{padding:25px;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
 .privacy-step .number{display:inline-block;color:var(--teal);font:800 .75rem "Archivo",sans-serif;letter-spacing:.15em;margin-bottom:16px}
 .privacy-step h3{font:800 1.12rem/1.2 "Archivo",sans-serif;margin-bottom:10px}
-.privacy-limits{padding:28px;border-radius:18px;background:var(--sage);border-left:5px solid var(--teal);margin-bottom:54px}
+.privacy-limits{padding:28px;border-radius:6px;background:var(--panel);border:1px solid var(--rule);border-left:5px solid var(--teal);margin-bottom:54px}
 .privacy-limits ul{margin:15px 0 0;padding-left:21px}
 .privacy-split{display:grid;grid-template-columns:1fr 1fr;gap:42px;margin-bottom:58px}
 .privacy-split h2{font-size:1.5rem}.privacy-split ul{padding-left:21px}
-.privacy-cta{padding:36px;border-radius:22px;background:#0D1B2E;color:#fff}
-.privacy-cta h2,.privacy-cta p{color:#fff}
-.privacy-cta a{display:inline-block;margin-top:13px;padding:12px 20px;background:#fff;color:#0D1B2E;border-radius:10px;text-decoration:none}
-.privacy-cta .small{font-size:.83rem;opacity:.85}
+.privacy-cta{padding:clamp(26px,4vw,40px);border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+.privacy-cta .small{font-size:.83rem;color:var(--mut)}
 .privacy-faq{margin:54px 0 0;max-width:78ch}
 .privacy-faq h3{font:800 1.08rem "Archivo",sans-serif;margin:25px 0 7px}
 .privacy-faq p{margin:0}
-@media(max-width:740px){.privacy-steps,.privacy-split{grid-template-columns:1fr}.privacy-page{padding:36px 0 55px}}
+@media(max-width:740px){.privacy-steps,.privacy-split{grid-template-columns:1fr}.privacy-page{padding:6px 0 55px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Digital Footprint Cleanup","serviceType":"Personal data removal assistance","description":"Authorized inventory of public personal-information listings, eligible opt-out and source or search removal requests, and a status evidence log. Outcomes depend on site and search-provider decisions.","provider":{"@type":"ProfessionalService","name":"The Mobley Group","url":"https://themobleygroup.com/"},"url":"https://themobleygroup.com/privacy-cleanup.html"}</script>
 </head>
@@ -61,11 +59,11 @@
 </header>
 
 <main id="main">
-<div class="page-hero"><div class="wrap">
-  <span class="pill"><span class="dot"></span> Personal privacy · Written scope</span>
-  <h1>Reduce the personal information <span class="t">people can find about you.</span></h1>
+<div class="wrap hero">
+  <p class="eyebrow">Personal privacy · Written scope</p>
+  <h1 class="mega">Reduce the personal information <span class="t">people can find about you.</span></h1>
   <p class="lede">We find exposed listings, submit eligible removal requests, and show you what changed. The work is documented; the outcome depends on each site or search provider.</p>
-</div></div>
+</div>
 <div class="wrap privacy-page">
   <p class="privacy-lead">A search for your name, phone number, or address can surface people-search listings you did not create. Digital footprint cleanup is a guided removal effort with a defined list of URLs and a visible result for each one.</p>
   <section aria-labelledby="process-h">
@@ -98,7 +96,7 @@
   <section class="privacy-cta" aria-labelledby="inquiry-h">
     <h2 id="inquiry-h">Ask for a private scope</h2>
     <p>Describe the kind of listing you want reviewed. We will reply with coverage, deliverables, and price for an agreed first sweep.</p>
-    <a href="mailto:nick@themobleygroup.com?subject=Digital%20footprint%20cleanup%20%E2%80%94%20inquiry">Email about cleanup →</a>
+    <a class="btn btn-solid" href="mailto:nick@themobleygroup.com?subject=Digital%20footprint%20cleanup%20%E2%80%94%20inquiry">Email about cleanup →</a>
     <p class="small">Your first message should contain no ID documents or private account credentials.</p>
   </section>
   <section class="privacy-faq" aria-labelledby="faq-h">
