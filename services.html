@@ -9,7 +9,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="fin.css">
+<style>
+.svc-detail{scroll-margin-top:90px}
+.svc-detail h2{font-weight:800;font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.01em;margin:6px 0 14px}
+.svc-detail h3{font-weight:800;font-size:1.15rem;margin:24px 0 8px}
+.svc-detail p,.svc-detail ul{color:var(--ink-soft);max-width:75ch}
+.svc-detail a{color:var(--teal);font-weight:600}
+.svc-detail .ask a{font-family:"Archivo",sans-serif;font-weight:700}
+.audit-h{font-weight:800;font-size:clamp(1.35rem,2.6vw,1.9rem);letter-spacing:-.01em;margin:8px 0 12px}
+#conversion-audit p,#conversion-audit ul{color:var(--ink-soft);max-width:75ch}
+#conversion-audit a{color:var(--teal);font-weight:600}
+#conversion-audit .ask a{font-family:"Archivo",sans-serif;font-weight:700}
+.ba-step .n{display:inline-block;color:var(--teal);font-family:"Archivo",sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.12em;margin-right:10px}
+.ba-step .what{font-weight:700;color:var(--ink)}
+#services-faq .faq-item h3{font-weight:800;font-size:1.12rem;margin:26px 0 7px}
+#services-faq .faq-item:first-child h3{margin-top:0}
+#services-faq .faq-item p{color:var(--ink-soft);max-width:75ch;margin:0}
+#services-faq .faq-item a{color:var(--teal);font-weight:600}
+</style>
 
   <!-- SEO -->
   <link rel="canonical" href="https://themobleygroup.com/services.html">
@@ -53,46 +71,42 @@
 
 <main id="main">
 
-  <div class="page-hero">
-    <div class="wrap">
-      <span class="pill"><span class="dot"></span> Services</span>
-      <h1>Ten scoped services. <span class="t">Clear work and clear handover.</span></h1>
+  <div class="wrap hero">
+      <p class="eyebrow">Services</p>
+      <h1 class="mega">Ten scoped services. <span class="t">Clear work and clear handover.</span></h1>
       <p class="lede">Every service starts with a written scope, clear deliverables, and a documented handover. Business builds run in your accounts; privacy work proceeds only with your authorization.</p>
-    </div>
   </div>
 
-  <div class="ba-band">
-    <div class="wrap">
-      <div class="ba-head">
-        <span class="k">The mechanism</span>
-        <h2>One missed call. Two endings.</h2>
+  <section class="reason wrap" aria-labelledby="ba-h">
+      <p class="eyebrow">The mechanism</p>
+      <h2 class="r-head" id="ba-h">One missed call. Two endings.</h2>
+      <div class="panel">
+      <div class="proof-grid">
+        <article>
+          <h3>Without a system</h3>
+          <p>The phone rings while you’re on a job. Then this happens:</p>
+          <p class="ba-step"><span class="n">01</span><span class="what">Call missed.</span> It goes to voicemail — if the caller bothers.</p>
+          <p class="ba-step"><span class="n">02</span><span class="what">Voicemail sits.</span> You see it hours later, between jobs.</p>
+          <p class="ba-step"><span class="n">03</span><span class="what">Callback, maybe.</span> If you remember, and if the number’s still on your screen.</p>
+          <p class="ba-step"><span class="n">04</span><span class="what">Silence.</span> The caller has already dialed the next name on the list.</p>
+        </article>
+        <article>
+          <h3>With the Mobley system</h3>
+          <p>The same missed call, run through the build:</p>
+          <p class="ba-step"><span class="n">01</span><span class="what">Call missed.</span> The system notices the second it happens.</p>
+          <p class="ba-step"><span class="n">02</span><span class="what">Text-back sent.</span> The caller gets a text right away, from your number.</p>
+          <p class="ba-step"><span class="n">03</span><span class="what">Conversation opens.</span> They reply, pick a time, get booked — logged in your records.</p>
+          <p class="ba-step"><span class="n">04</span><span class="what">Review requested.</span> After the job, the follow-up asks — automatically.</p>
+        </article>
       </div>
-      <div class="ba">
-        <div class="ba-card before">
-          <div class="tagline">Without a system</div>
-          <div class="sub">The phone rings while you’re on a job. Then this happens:</div>
-          <div class="ba-step"><span class="n">01</span><span><span class="what">Call missed.</span> <span class="then">It goes to voicemail — if the caller bothers.</span></span></div>
-          <div class="ba-step"><span class="n">02</span><span><span class="what">Voicemail sits.</span> <span class="then">You see it hours later, between jobs.</span></span></div>
-          <div class="ba-step"><span class="n">03</span><span><span class="what">Callback, maybe.</span> <span class="then">If you remember, and if the number’s still on your screen.</span></span></div>
-          <div class="ba-step"><span class="n">04</span><span><span class="what">Silence.</span> <span class="then">The caller has already dialed the next name on the list.</span></span></div>
-        </div>
-        <div class="ba-card after">
-          <div class="tagline">With the Mobley system</div>
-          <div class="sub">The same missed call, run through the build:</div>
-          <div class="ba-step"><span class="n">01</span><span><span class="what">Call missed.</span> <span class="then">The system notices the second it happens.</span></span></div>
-          <div class="ba-step"><span class="n">02</span><span><span class="what">Text-back sent.</span> <span class="then">The caller gets a text right away, from your number.</span></span></div>
-          <div class="ba-step"><span class="n">03</span><span><span class="what">Conversation opens.</span> <span class="then">They reply, pick a time, get booked — logged in your records.</span></span></div>
-          <div class="ba-step"><span class="n">04</span><span><span class="what">Review requested.</span> <span class="then">After the job, the follow-up asks — automatically.</span></span></div>
-        </div>
+      <p class="panel-cap">Illustrative flow — the mechanism, shown plainly</p>
       </div>
-      <div class="ba-cap">Illustrative flow — the mechanism, shown plainly</div>
-    </div>
-  </div>
+  </section>
 
-  <section class="wrap" aria-labelledby="how-engagement-h" style="padding:2.5rem 0 0"> <div class="sec-head"> <span class="k">How every engagement works</span> <h2 id="how-engagement-h">Three steps, in that order, every time</h2> </div> <div class="steps"> <div class="step"><span class="num">01 · SCOPE</span><h3>Written scope first</h3><p>You describe the problem by email. You get a written scope — what gets built, what it costs, what you provide — before anything is built.</p></div> <div class="step"><span class="num">02 · BUILD</span><h3>Built in your accounts</h3><p>The build happens under your logins, on your domain, with your tools — tested as it goes, and documented in plain language while it&rsquo;s built.</p></div> <div class="step"><span class="num">03 · HANDOVER</span><h3>Handover + report</h3><p>You receive the finished work with its documentation and, for field work, a photo-verified report — so you can check every claim yourself.</p></div> </div> </section> <section class="wrap" id="conversion-audit" style="padding:2.5rem 0" aria-labelledby="conversion-audit-title">
-    <div style="padding:clamp(1.2rem,3vw,2.4rem);border:1px solid #b7c9ca;border-radius:18px;background:#f3f8f8;color:#112637">
-      <span class="tag">Fixed-scope diagnostic · Starting point</span>
-      <h2 id="conversion-audit-title" style="margin:.7rem 0">Conversion &amp; Call-Leak Audit — $149 flat</h2>
+  <section class="reason wrap" aria-labelledby="how-engagement-h"> <p class="eyebrow">How every engagement works</p> <h2 class="r-head" id="how-engagement-h">Three steps, in that order, every time</h2> <div class="panel"> <div class="proof-grid"> <article><p class="panel-label">01 · SCOPE</p><h3>Written scope first</h3><p>You describe the problem by email. You get a written scope — what gets built, what it costs, what you provide — before anything is built.</p></article> <article><p class="panel-label">02 · BUILD</p><h3>Built in your accounts</h3><p>The build happens under your logins, on your domain, with your tools — tested as it goes, and documented in plain language while it&rsquo;s built.</p></article> <article><p class="panel-label">03 · HANDOVER</p><h3>Handover + report</h3><p>You receive the finished work with its documentation and, for field work, a photo-verified report — so you can check every claim yourself.</p></article> </div> </div> </section> <section class="wrap" id="conversion-audit" aria-labelledby="conversion-audit-title">
+    <div class="panel">
+      <p class="panel-label">Fixed-scope diagnostic · Starting point</p>
+      <h2 class="audit-h" id="conversion-audit-title">Conversion &amp; Call-Leak Audit — $149 flat</h2>
       <p>Already have a site but unsure where visitors lose the path to a call, message, or booking? Get a practical, human-reviewed diagnostic rather than an open-ended sales pitch.</p>
       <ul>
         <li>Review of one public-facing business website (up to five key pages), mobile contact paths, forms, calls to action, and publicly testable booking links.</li>
@@ -106,9 +120,9 @@
   </section>
   <div class="wrap svc-list">
 
-    <article class="service-detail" id="voice-receptionist">
-      <span class="tag">Voice · 24/7</span>
-      <h2><span class="chip" style="background:#E3F0F1"><svg viewBox="0 0 24 24" fill="none" stroke="#17585E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span>AI Voice Receptionist</h2>
+    <article class="panel svc-detail" id="voice-receptionist">
+      <p class="panel-label">Voice · 24/7</p>
+      <h2>AI Voice Receptionist</h2>
       <p>When you're on a job, with a customer, or closed for the night, your phone still rings — and most callers who reach voicemail simply call the next business on the list. An AI voice receptionist answers your business line around the clock. It greets callers in a natural voice, answers the common questions you approve in advance — hours, services, pricing basics, directions — books appointments into your calendar, and takes messages when a human needs to call back. Every call leaves a record: a summary and transcript delivered to you, so nothing a caller said is lost.</p>
       <p>The agent only says what's in the facts you provide. You approve the greeting, the answers, and what it should never guess at. The setup lives in your accounts, on your number.</p>
       <h3>What's included</h3>
@@ -122,9 +136,9 @@
       <p class="ask"><a href="mailto:nick@themobleygroup.com?subject=AI%20Voice%20Receptionist%20—%20inquiry">Ask about this service →</a></p>
     </article>
 
-    <article class="service-detail" id="n8n-automation">
-      <span class="tag">Workflows · n8n</span>
-      <h2><span class="chip" style="background:#F0EBFD"><svg viewBox="0 0 24 24" fill="none" stroke="#7C5CD6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="6" height="6" rx="1.5"/><rect x="16" y="16" width="6" height="6" rx="1.5"/><rect x="16" y="2" width="6" height="6" rx="1.5"/><path d="M8 5h8M5 8v6a2 2 0 0 0 2 2h9"/></svg></span>n8n Automation</h2>
+    <article class="panel svc-detail" id="n8n-automation">
+      <p class="panel-label">Workflows · n8n</p>
+      <h2>n8n Automation</h2>
       <p>Most small businesses run on repetitive digital chores: copying leads from a form into a spreadsheet, sending the same follow-up emails, re-typing order details into another system, chasing reminders by hand. n8n is an open workflow-automation tool that connects the apps you already use and runs those chores for you. I map the manual process with you first, then build the workflow in n8n — in your own hosting and accounts — connect it to your tools, and add alerts so a failure surfaces instead of silently dropping work.</p>
       <p>Because it runs in your infrastructure and is built from open tooling, there is no per-task toll and no vendor holding your automations hostage. You get the workflows, the documentation, and the keys.</p>
       <h3>What's included</h3>
@@ -140,9 +154,9 @@
       <p class="ask"><a href="mailto:nick@themobleygroup.com?subject=n8n%20Automation%20—%20inquiry">Ask about this service →</a></p>
     </article>
 
-    <article class="service-detail" id="ai-website-assistant">
-      <span class="tag">Website · Visitor guidance</span>
-      <h2><span class="chip" style="background:#EDF3F0"><svg viewBox="0 0 24 24" fill="none" stroke="#17585E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H8l-4 4V4z"/><path d="M8 9h8M8 12h5"/></svg></span>AI Website Assistant</h2>
+    <article class="panel svc-detail" id="ai-website-assistant">
+      <p class="panel-label">Website · Visitor guidance</p>
+      <h2>AI Website Assistant</h2>
       <p>Visitors ask the same questions before they are ready to call: which service fits, what is included, and how to take the next step. We build a website chat assistant from the business facts you approve. It can point to the right page or product, answer supported questions, and hand off uncertainty to a person instead of inventing an answer.</p>
       <p>The working example on our <a href="index.html#assistant-demo">homepage</a> reads the public catalog with simple rules; it does not call an AI model. A client deployment adds a private model connection, source controls, privacy choices, and tested handoff in the client's own accounts.</p>
       <h3>What's included</h3>
@@ -155,9 +169,9 @@
       <p class="ask"><a href="mailto:nick@themobleygroup.com?subject=AI%20Website%20Assistant%20%E2%80%94%20inquiry">Ask about this service →</a></p>
     </article>
 
-    <article class="service-detail" id="missed-call-text-back">
-      <span class="tag">Follow-up · SMS &amp; Reviews</span>
-      <h2><span class="chip" style="background:#FDECE9"><svg viewBox="0 0 24 24" fill="none" stroke="#F0715C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Missed-Call Text-Back &amp; Review Automation</h2>
+    <article class="panel svc-detail" id="missed-call-text-back">
+      <p class="panel-label">Follow-up · SMS &amp; Reviews</p>
+      <h2>Missed-Call Text-Back &amp; Review Automation</h2>
       <p>A missed call doesn't have to be a missed customer. This setup watches your business line, and when a call goes unanswered, it automatically sends the caller a text from your number — "Sorry we missed you" — and opens a two-way text conversation that lands in your inbox, where you can reply like any other message. The second half runs after the work is done: on a schedule you set, customers who did business with you get a polite review request pointing to your Google profile, with the same public review link for every eligible customer. Replies and concerns route to your inbox for follow-up.</p>
       <p>Texts go only to people who called you or bought from you. Opt-outs are honored automatically. Timing, wording, and frequency are yours to set.</p>
       <h3>What's included</h3>
@@ -171,9 +185,9 @@
       <p class="ask"><a href="mailto:nick@themobleygroup.com?subject=Missed-Call%20Text-Back%20—%20inquiry">Ask about this service →</a></p>
     </article>
 
-    <article class="service-detail" id="website-builds">
-      <span class="tag">Web · Multi-page</span>
-      <h2><span class="chip" style="background:#EAF1F8"><svg viewBox="0 0 24 24" fill="none" stroke="#5B84AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>Website Builds</h2>
+    <article class="panel svc-detail" id="website-builds">
+      <p class="panel-label">Web · Multi-page</p>
+      <h2>Website Builds</h2>
       <p>A professional website for your small business, designed and built end-to-end: a real multi-page site — home, services, about, contact, and the location pages your customers actually search for — on your own domain, readable on a phone, with a clear way to reach you on every page. You approve the copy and the look before launch. There are no page-builder rents and no mystery admin holding your site hostage: the site is registered to you, built for you, and handed over with every login.</p>
       <p>This site is an example of the work — a fast, no-framework build that runs on no-cost hosting where the setup allows (your domain and any paid tools are extra) and is easy to keep. If your business needs something bigger, the scope conversation will say so honestly before you spend anything.</p>
       <h3>What's included</h3>
@@ -187,9 +201,9 @@
       <p class="ask"><a href="mailto:nick@themobleygroup.com?subject=Website%20Build%20—%20inquiry">Ask about this service →</a></p>
     </article>
 
-    <article class="service-detail" id="social-media-management">
-      <span class="tag">Social · Managed</span>
-      <h2><span class="chip" style="background:#FDECE9"><svg viewBox="0 0 24 24" fill="none" stroke="#D84A33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.6"/></svg></span>Social Media Management</h2>
+    <article class="panel svc-detail" id="social-media-management">
+      <p class="panel-label">Social · Managed</p>
+      <h2>Social Media Management</h2>
       <p>Your accounts shouldn't go quiet every time you get busy — and shouldn't depend on you remembering to post at 9 p.m. Social media management here runs as a system, not a scramble: a monthly content calendar planned in advance, posts written and scheduled from your real work — your services, your photos, your offers — and steady engagement routines for comments and messages, handled to rules you set. At month's end you get a plain report of what went out and what it did, so the work is visible and accountable.</p>
       <p>What this service will never promise: follower counts, viral posts, or sales numbers. What it does promise is a consistent, professional presence that doesn't eat your evenings.</p>
       <h3>What's included</h3>
@@ -203,9 +217,9 @@
       <p class="ask"><a href="mailto:nick@themobleygroup.com?subject=Social%20Media%20Management%20—%20inquiry">Ask about this service →</a></p>
     </article>
 
-    <article class="service-detail" id="branding">
-      <span class="tag">Identity · Assets</span>
-      <h2><span class="chip" style="background:#FBF0DC"><svg viewBox="0 0 24 24" fill="none" stroke="#C07F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><circle cx="8.5" cy="7.5" r="1"/><circle cx="6.5" cy="12.5" r="1"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.17-.84-.44-1.14-.25-.29-.43-.68-.43-1.12A1.68 1.68 0 0 1 14.46 16.5h2.03A5.5 5.5 0 0 0 22 11c0-4.97-4.5-9-10-9z"/></svg></span>Branding</h2>
+    <article class="panel svc-detail" id="branding">
+      <p class="panel-label">Identity · Assets</p>
+      <h2>Branding</h2>
       <p>Branding is the difference between a business that looks established and one that looks improvised — in the first three seconds, before a word is read. This service builds the visual identity your business presents everywhere: a logo and wordmark, a color palette and type pairing chosen to work at every size, and the working assets a business actually needs — social avatars, cover images, and templates your posts can reuse. Everything is delivered as files, in the formats your printer, your website, and your social accounts each require.</p>
       <p>You own the files outright — no re-license fees, no "we keep the source files" games. The Mobley Group's own identity on this page was built the same way.</p>
       <h3>What's included</h3>
@@ -219,9 +233,9 @@
       <p class="ask"><a href="mailto:nick@themobleygroup.com?subject=Branding%20—%20inquiry">Ask about this service →</a></p>
     </article>
 
-    <article class="service-detail" id="digital-footprint-cleanup">
-      <span class="tag">Privacy · Removal requests</span>
-      <h2><span class="chip" style="background:#EDF3F0"><svg viewBox="0 0 24 24" fill="none" stroke="#17585E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.3 8.3-8 10-4.7-1.7-8-5-8-10V6z"/><path d="M8 12l3 3 5-6"/></svg></span>Digital Footprint Cleanup</h2>
+    <article class="panel svc-detail" id="digital-footprint-cleanup">
+      <p class="panel-label">Privacy · Removal requests</p>
+      <h2>Digital Footprint Cleanup</h2>
       <p>Your home address, phone number, or other personal details may appear on people-search sites or in search results. We inventory the public URLs you authorize us to review, submit eligible opt-outs and removal requests to the source sites or search provider, and record what each provider actually did.</p>
       <p>The deliverable is a removal log: source URL, action and date, provider status, follow-up, and the remaining exposure. A Google result can disappear while the source page remains online. Public records, denials, and later reappearances are possible; we do not promise to erase every copy of your information. You retain access to your accounts and approve any identity verification a provider requires. Sensitive identity documents are not requested by the first inquiry email.</p>
       <h3>What's included</h3>
@@ -235,9 +249,9 @@
       <p class="ask"><a href="mailto:nick@themobleygroup.com?subject=Digital%20footprint%20cleanup%20%E2%80%94%20inquiry">Ask about this service →</a></p>
     </article>
 
-    <article class="service-detail" id="smart-remote-hands">
-      <span class="tag">Field services · Las Vegas area</span>
-      <h2><span class="chip" style="background:#E8EEF6"><svg viewBox="0 0 24 24" fill="none" stroke="#17585E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Smart Remote Hands</h2>
+    <article class="panel svc-detail" id="smart-remote-hands">
+      <p class="panel-label">Field services · Las Vegas area</p>
+      <h2>Smart Remote Hands</h2>
       <p>Your equipment sits in a Las Vegas-area data center or office; your team doesn't. Smart remote hands is scheduled on-site work performed by a working Las Vegas field-service engineer — data center technician experience, Dell-certified (Dell DCSE) — following your runbook or ours. The scope is agreed in writing before dispatch, and every visit closes with a photo-verified completion report.</p>
       <p>Coverage is Las Vegas, Henderson, and North Las Vegas, with an extended area available on request. Availability is by scheduled scope — this is planned work, not a 24/7 emergency promise. Site access and escorts are arranged by you with your facility.</p>
       <h3>What's included</h3>
@@ -256,27 +270,31 @@
 
   </div>
 
-  <section class="cta-final" aria-labelledby="cta-h">
-    <div class="wrap">
+  <section class="cta-final wrap" aria-labelledby="cta-h">
       <h2 id="cta-h">Not sure which one fits?</h2>
       <p>Describe the problem in plain words. If one of these services honestly isn't the fix, the reply will say that too.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="mailto:nick@themobleygroup.com?subject=Services%20inquiry%20—%20The%20Mobley%20Group">nick@themobleygroup.com</a>
       </div>
-    </div>
   </section>
 
 
-  <section id="services-faq" aria-labelledby="services-faq-h">
-    <h2 id="services-faq-h">Questions, answered straight</h2>
-      <h3>Do I own everything that gets built?</h3>
-      <p>Yes. Every build runs in your accounts, on your domain, with your tools — documented as it's built and handed over with the keys. No lock-in, no black boxes, no hostage renewals.</p>
-      <h3>How do we start?</h3>
-      <p>By email. You describe the problem in plain words and get a written scope — what gets built, what it costs, what you provide — before anything is built.</p>
-      <h3>Who holds the keys to my accounts?</h3>
-      <p>You do. Builds happen under your logins, and you can revoke access at any time. Handover includes documentation of what was set up and where.</p>
-      <h3>What does the AI voice receptionist actually do?</h3>
-      <p>It answers your calls on your number, books the appointment, and takes a clear message when you can't pick up — then confirms by text and logs it to your records.</p> <h3>How long does a build take?</h3> <p>The scope sets the timeline, and it&rsquo;s agreed in writing before work starts. The honest answer depends on the build and on how fast access, content, and approvals come back from your side, so the date you can hold us to is the one in your scope.</p> <h3>What don&rsquo;t you do?</h3> <p>The limits are printed on the pages where the offers are made: the cleanup service can&rsquo;t promise removals, the site&rsquo;s assistant demo is a labeled example rather than the client system, and nothing posts to your accounts until you approve it. If a request sits outside a service&rsquo;s stated limits, the scope says so before you pay — not after.</p> <h3>What if something goes wrong — or I want a refund?</h3> <p>Support runs through one email address, and the standing practice is simple: if something we delivered is broken, we fix it — and if we can&rsquo;t fix it, we make it right on the purchase. The <a href="terms.html">terms page</a> states the full position, including refunds, in plain language.</p> <h3>Where do you work?</h3> <p>On-site services — smart hands and local field work — cover Las Vegas, Henderson, and North Las Vegas. Builds that live in your accounts (receptionist, automations, websites) are delivered remotely and aren&rsquo;t limited by geography.</p> <h3>When are you available?</h3> <p>Email is the front door and it&rsquo;s answered by a person — the operator. Engagements are scheduled work, agreed in the scope; this is a studio, not a 24/7 call center, and the pages say so rather than pretend otherwise.</p>
+  <section class="reason wrap" id="services-faq" aria-labelledby="services-faq-h">
+    <h2 class="r-head" id="services-faq-h">Questions, answered straight</h2>
+    <div class="panel">
+      <div class="faq-item"><h3>Do I own everything that gets built?</h3>
+      <p>Yes. Every build runs in your accounts, on your domain, with your tools — documented as it's built and handed over with the keys. No lock-in, no black boxes, no hostage renewals.</p></div>
+      <div class="faq-item"><h3>How do we start?</h3>
+      <p>By email. You describe the problem in plain words and get a written scope — what gets built, what it costs, what you provide — before anything is built.</p></div>
+      <div class="faq-item"><h3>Who holds the keys to my accounts?</h3>
+      <p>You do. Builds happen under your logins, and you can revoke access at any time. Handover includes documentation of what was set up and where.</p></div>
+      <div class="faq-item"><h3>What does the AI voice receptionist actually do?</h3>
+      <p>It answers your calls on your number, books the appointment, and takes a clear message when you can't pick up — then confirms by text and logs it to your records.</p></div> <div class="faq-item"><h3>How long does a build take?</h3>
+      <p>The scope sets the timeline, and it&rsquo;s agreed in writing before work starts. The honest answer depends on the build and on how fast access, content, and approvals come back from your side, so the date you can hold us to is the one in your scope.</p></div> <div class="faq-item"><h3>What don&rsquo;t you do?</h3>
+      <p>The limits are printed on the pages where the offers are made: the cleanup service can&rsquo;t promise removals, the site&rsquo;s assistant demo is a labeled example rather than the client system, and nothing posts to your accounts until you approve it. If a request sits outside a service&rsquo;s stated limits, the scope says so before you pay — not after.</p></div> <div class="faq-item"><h3>What if something goes wrong — or I want a refund?</h3>
+      <p>Support runs through one email address, and the standing practice is simple: if something we delivered is broken, we fix it — and if we can&rsquo;t fix it, we make it right on the purchase. The <a href="terms.html">terms page</a> states the full position, including refunds, in plain language.</p></div> <div class="faq-item"><h3>Where do you work?</h3>
+      <p>On-site services — smart hands and local field work — cover Las Vegas, Henderson, and North Las Vegas. Builds that live in your accounts (receptionist, automations, websites) are delivered remotely and aren&rsquo;t limited by geography.</p></div> <div class="faq-item"><h3>When are you available?</h3>
+      <p>Email is the front door and it&rsquo;s answered by a person — the operator. Engagements are scheduled work, agreed in the scope; this is a studio, not a 24/7 call center, and the pages say so rather than pretend otherwise.</p></div>
   </section>
 </main>
 
