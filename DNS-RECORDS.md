@@ -26,7 +26,8 @@ Do NOT change: MX, SPF TXT, DMARC, DKIM, Spacemail records.
 | MX | @ | 0 mx2.spacemail.com |
 | TXT | @ | v=spf1 include:spf.spacemail.com ~all |
 | TXT | _dmarc | v=DMARC1; p=none; rua=mailto:nick@themobleygroup.com |
-| TXT | *._domainkey | any existing DKIM — do not edit/delete |
+| TXT | spacemail._domainkey | v=DKIM1;k=rsa;p=… (full key live) — DO NOT EDIT |
+| TXT | *._domainkey | any other DKIM — do not edit/delete |
 
 ## GitHub
 
