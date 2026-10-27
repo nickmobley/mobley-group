@@ -16,6 +16,8 @@
 .prose p{color:var(--ink-soft);max-width:72ch}
 .prose ul{color:var(--ink-soft);max-width:72ch}
 .prose a{color:var(--teal);font-weight:600}
+.prose .faq-group{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.25rem;letter-spacing:-.01em;margin:32px 0 2px}
+.prose .faq-group + dl.faq dt:first-of-type{margin-top:10px}
 .prose dl.faq dt{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.08rem;margin:26px 0 7px}
 .prose dl.faq dd{margin:0;color:var(--ink-soft);max-width:72ch}
 </style>
@@ -35,7 +37,7 @@
   <meta name="twitter:title" content="Support — The Mobley Group">
   <meta name="twitter:description" content="Support for The Mobley Group products and services, including SitterSheet. Email nick@themobleygroup.com.">
   <!-- /SEO -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I get a product I bought?","acceptedAnswer":{"@type":"Answer","text":"Products are sold and delivered through Gumroad. After checkout, Gumroad emails you a receipt with your download link, and the product also appears in your Gumroad library if you have an account."}},{"@type":"Question","name":"My download failed or a file is broken. What now?","acceptedAnswer":{"@type":"Answer","text":"Try the link once more on a different connection or browser. Still broken? Email nick@themobleygroup.com with the product name and your checkout email \u2014 a working copy or a fix comes back by email."}},{"@type":"Question","name":"How does SitterSheet store my information?","acceptedAnswer":{"@type":"Answer","text":"SitterSheet is local-first: the sits, pay, and notes you enter stay on your device. There is no SitterSheet account and no cloud copy on our side."}},{"@type":"Question","name":"Do you offer phone support?","acceptedAnswer":{"@type":"Answer","text":"Support is by email, so there's a written record of the problem and the fix for both of us. If an issue genuinely needs a call, we'll arrange one by email."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I get a product I bought?","acceptedAnswer":{"@type":"Answer","text":"Products are sold and delivered through Gumroad. After checkout, Gumroad emails you a receipt with your download link, and the product also appears in your Gumroad library if you have an account."}},{"@type":"Question","name":"My download failed or a file is broken. What now?","acceptedAnswer":{"@type":"Answer","text":"Try the link once more on a different connection or browser. Still broken? Email nick@themobleygroup.com with the product name and your checkout email \u2014 a working copy or a fix comes back by email."}},{"@type":"Question","name":"How does SitterSheet store my information?","acceptedAnswer":{"@type":"Answer","text":"SitterSheet is local-first: the sitting jobs, pay, and notes you enter stay on your device. There is no SitterSheet account and no cloud copy on our side."}},{"@type":"Question","name":"Do you offer phone support?","acceptedAnswer":{"@type":"Answer","text":"Support is by email, so there's a written record of the problem and the fix for both of us. If an issue genuinely needs a call, we'll arrange one by email."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -81,6 +83,7 @@
       </ul>
 
       <h2>Frequently Asked Questions</h2>
+      <h3 class="faq-group">Products</h3>
       <dl class="faq">
         <dt>How do I get a product I bought?</dt>
         <dd>Products are sold and delivered through Gumroad. After checkout, Gumroad emails you a receipt with your download link, and the product also appears in your Gumroad library if you have an account. If the email doesn't arrive, check spam first — then email us with the address you used at checkout.</dd>
@@ -89,16 +92,19 @@
         <dd>Try the link once more on a different connection or browser. Still broken? Email <a href="mailto:nick@themobleygroup.com?subject=Support%20—%20broken%20download">nick@themobleygroup.com</a> with the product name and your checkout email. A working copy or a fix comes back by email — and if we can't fix it, we'll make it right on the purchase.</dd>
 
         <dt>How does SitterSheet store my information?</dt>
-        <dd>SitterSheet is local-first: the sits, pay, and notes you enter stay on your device. There is no SitterSheet account and no cloud copy on our side, which also means we can't recover data deleted from the device — export a report from the app if you want a backup.</dd>
+        <dd>SitterSheet is local-first: the sitting jobs, pay, and notes you enter stay on your device. There is no SitterSheet account and no cloud copy on our side, which also means we can't recover data deleted from the device — export a report from the app if you want a backup.</dd>
 
         <dt>I bought the wrong product. Can I get a refund?</dt>
-        <dd>Email us and say so plainly. Digital products that haven't worked for you are handled case by case, in the customer's favor when the mistake is ours. Gumroad processes the payment side of any refund.</dd>
+        <dd>Email us with your order details, and we'll help sort it out. Digital products that haven't worked for you are handled case by case, in the customer's favor when the mistake is ours. Gumroad processes the payment side of any refund.</dd>
 
+<dt>Do you offer phone support?</dt>
+        <dd>Support is by email, so there's a written record of the problem and the fix for both of us. If an issue genuinely needs a call, we'll arrange one by email.</dd>
+      </dl>
+      <h3 class="faq-group">Services clients</h3>
+      <dl class="faq">
         <dt>I'm a services client. Where do I ask about my build?</dt>
         <dd>Same address: <a href="mailto:nick@themobleygroup.com?subject=Support%20—%20services%20client">nick@themobleygroup.com</a>. Put your business name in the subject line. Every build ships with documentation that lists what was set up and where — quoting the relevant page of your handover doc gets the fastest answer.</dd>
 
-        <dt>Do you offer phone support?</dt>
-        <dd>Support is by email, so there's a written record of the problem and the fix for both of us. If an issue genuinely needs a call, we'll arrange one by email.</dd>
 
         <dt>Who holds the keys to my accounts?</dt>
         <dd>You do. Services are built in your own accounts — your domain, your hosting, your logins — so the accounts, the files, and the data are yours from the start, and the access is yours to change or revoke whenever you like. If we ever part ways, everything that was built stays right where it is, in your accounts, with the handover documentation to run it yourself or pass to someone else.</dd>
