@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--
+  SHOWROOM PAGE — Workflow Automation (Illustrative Demo) · Published to themobleygroup.com Oct 27, 2026.
+  Built in-house by the Fleet, Oct 27, 2026, per showroom-spec.md §4 (business
+  systems → sample-output walkthrough; fictional data labeled on the dashboard
+  itself) + catalog-showroom-map.md. The board is an OPERATIONS board — it is
+  never dressed as a security/audit interface. Every figure is invented and says
+  so on the surface. Nothing typed is stored or sent.
+  Register: n8n-automation, "Workflow automation", by scope.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workflow Automation — The Mobley Group</title>
+<meta name="description" content="n8n workflow automation built in your accounts: leads routed, reminders sent, reports assembled — with a human-visible record of every step. Explore a fictional operations board and a three-step walkthrough. Priced by written scope.">
+<link rel="canonical" href="https://themobleygroup.com/workflow-automation.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="The Mobley Group">
+<meta property="og:title" content="Workflow Automation — The Mobley Group">
+<meta property="og:description" content="The repeatable parts of your week, handled the same way every time — and documented so you can see exactly what ran.">
+<meta property="og:url" content="https://themobleygroup.com/workflow-automation.html"><meta property="og:image" content="https://themobleygroup.com/assets/og-image.png">
+<link rel="icon" type="image/png" href="assets/logo-monogram.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fin.css">
+<style>
+.label-chip{display:inline-flex;align-items:center;gap:8px;font:800 11px "Archivo",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);border:1.5px solid var(--teal);border-radius:999px;padding:6px 13px;background:#fff}
+.label-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.sample-line{font-size:13px;color:var(--mut);margin:10px 0 0}
+h2.sec{font:800 clamp(1.5rem,3vw,2.1rem)/1.15 "Archivo",sans-serif;margin:14px 0 12px;letter-spacing:-.01em}
+section.block{margin-top:clamp(48px,6vw,72px)}
+.board{background:#fff;border:1.5px solid var(--ink);border-radius:8px;overflow:hidden}
+.board-head{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;padding:16px 20px;border-bottom:1px solid var(--rule)}
+.board-head b{font:800 16px "Archivo",sans-serif}
+.board-strip{background:#F8EDEC;color:#8a3030;font:700 11.5px "Inter",sans-serif;padding:9px 20px;border-bottom:1px solid #EEDBD9}
+.board-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.metric{padding:20px;border-right:1px solid var(--rule)}
+.metric:last-child{border-right:none}
+.metric b{display:block;font:800 2rem "Archivo",sans-serif;color:var(--teal)}
+.metric span{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.board-tasks{padding:6px 20px 20px}
+.task{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.task:last-of-type{border-bottom:none}
+.task label{display:flex;gap:11px;align-items:center;cursor:pointer;color:var(--ink-soft)}
+.task input{width:19px;height:19px;accent-color:var(--teal)}
+.bar{height:10px;background:#E7EFEA;border-radius:99px;overflow:hidden;margin-top:14px}
+.bar>div{height:100%;background:var(--teal);width:33%}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.flow-card{border:1px solid var(--rule);border-radius:6px;background:var(--panel);padding:22px}
+.flow-card .number{display:inline-block;color:var(--teal);font:800 .75rem "Archivo",sans-serif;letter-spacing:.15em;margin-bottom:12px}
+.flow-card h3{font:800 1.08rem/1.2 "Archivo",sans-serif;margin:0 0 9px}
+.flow-card p{color:var(--ink-soft);font-size:15px;margin:0}
+.artifact{margin-top:14px;background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:13px 15px;font-size:13.5px;color:var(--ink-soft)}
+.artifact .who{display:block;font:700 10px "Archivo",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:42px}
+.split h2{font:800 1.5rem/1.15 "Archivo",sans-serif;margin:0 0 12px}
+.split ul{padding-left:21px}.split p,.split li{color:var(--ink-soft)}
+.cta-box{padding:clamp(26px,4vw,40px);border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+.cta-box .small{font-size:.83rem;color:var(--mut)}
+@media(max-width:820px){.flow,.split{grid-template-columns:1fr}.board-grid{grid-template-columns:1fr}.metric{border-right:none;border-bottom:1px solid var(--rule)}}
+@media(prefers-reduced-motion:reduce){*{transition:none}.bar>div{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap masthead">
+    <a class="lockup" href="index.html" aria-label="The Mobley Group — home">
+      <span class="mono"><svg viewBox="0 0 30 26" fill="none" aria-hidden="true"><path d="M5 21V9l5.5 7L16 9v12" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5" cy="21" r="2" fill="#E8A33D"/><circle cx="16" cy="21" r="2" fill="#E8A33D"/><circle cx="10.5" cy="16" r="2" fill="#fff"/><circle cx="21" cy="6" r="1.8" fill="#fff"/><path d="M24.3 2.7a4.6 4.6 0 0 1 0 6.6" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round"/><path d="M26.9 .6a8.4 8.4 0 0 1 0 10.8" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round" opacity=".55"/></svg></span>
+      <span class="word">The Mobley Group<small>Systems · Automation · Web</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="products.html">Products</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="las-vegas.html">Las Vegas</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+      <a class="cta" href="mailto:nick@themobleygroup.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap hero">
+  <p class="eyebrow">Automation services · Built by Mobley Labs — a Mobley Group studio</p>
+  <h1 class="mega">The repeatable work, <span class="t">handled the same way every time.</span></h1>
+  <p class="lede">Workflow automation takes the jobs your week repeats — routing a new lead, sending the reminder, assembling the report — and runs them on rails you own, with a visible record of every step. Built with n8n in your accounts, documented, and handed over.</p>
+</div>
+
+<div class="wrap">
+  <section class="block" aria-labelledby="who-h" style="margin-top:clamp(40px,5vw,64px)">
+    <h2 class="sec" id="who-h" style="margin-top:0">Who it's for — and the problem it solves</h2>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0 0 10px"><strong>Who it's for:</strong> small teams losing hours to repeatable follow-up — inquiries to route, reminders to send, boards to update by hand.</p>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0"><strong>The problem:</strong> the work isn't hard; it's relentless, and it slips when the day gets busy. A scoped automation does the repeatable steps the same way every time and shows its work in a log a person can check.</p>
+  </section>
+
+  <section class="block" aria-labelledby="demo-h" style="margin-top:clamp(40px,5vw,64px)">
+    <span class="label-chip">Illustrative Demo</span>
+    <h2 class="sec" id="demo-h">A morning board for a fictional business</h2>
+    <p style="color:var(--ink-soft);max-width:70ch;margin:0">High Desert Home Services doesn't exist — and neither do its numbers. Play the operator: close the sample tasks and watch the board settle. Below the board, the same morning is shown as a workflow: what an automation actually does, step by step.</p>
+    <p class="sample-line"><strong>Sample data · Explore the experience.</strong> This demo is an original marketing representation; it is not evidence of a customer deployment, and nothing on it is connected to a real system.</p>
+
+    <div class="board" style="margin-top:24px">
+      <div class="board-head"><b>High Desert Home Services — Today</b><span class="label-chip">Illustrative Demo</span></div>
+      <div class="board-strip">Every record and figure on this board is invented for this demonstration.</div>
+      <div class="board-grid">
+        <div class="metric"><b id="m-inq">4</b><span>New inquiries waiting</span></div>
+        <div class="metric"><b id="m-rem">3</b><span>Reminders due today</span></div>
+        <div class="metric"><b id="m-done">1 of 3</b><span>Morning tasks closed</span></div>
+      </div>
+      <div class="board-tasks">
+        <div class="task"><label><input type="checkbox" data-task="0"> Review customer inquiries</label><span>Sample task</span></div>
+        <div class="task"><label><input type="checkbox" data-task="1" checked> Send appointment reminders</label><span>Sample task</span></div>
+        <div class="task"><label><input type="checkbox" data-task="2"> Prepare weekly report</label><span>Sample task</span></div>
+        <div class="bar" role="img" aria-label="Progress bar for sample tasks"><div id="bar-fill"></div></div>
+        <p class="sample-line" id="board-note">In a real build, this board is the summary your automations leave behind — so a person always sees what ran.</p>
+      </div>
+    </div>
+
+    <div class="flow">
+      <article class="flow-card"><span class="number">STEP 1 · ARRIVES</span><h3>A lead comes in</h3><p>A form, a call, a message — the automation catches it the moment it lands, in whatever channel it arrived.</p>
+        <div class="artifact"><span class="who">Sample artifact · Form message</span>"Hi — our water heater is leaking. Can someone come Thursday?" — website form, 7:42 a.m. (fictional)</div></article>
+      <article class="flow-card"><span class="number">STEP 2 · ROUTED</span><h3>It goes to the right place</h3><p>Rules you approve decide what happens next: urgent to a person now, routine into the queue, everything logged either way.</p>
+        <div class="artifact"><span class="who">Sample artifact · Routing note</span>Type: service call · Priority: same-day · Owner: dispatched to the on-call tech, summary to the owner. (fictional)</div></article>
+      <article class="flow-card"><span class="number">STEP 3 · FOLLOWED UP</span><h3>Nobody has to remember</h3><p>The confirmation, the reminder, the review request after the job — sent on schedule, written in your voice, visible in the log.</p>
+        <div class="artifact"><span class="who">Sample artifact · Follow-up sent</span>"You're booked for Thursday between 9 and 11. Reply here if that window stops working." (fictional)</div></article>
+    </div>
+  </section>
+
+  <div class="split block">
+    <section aria-labelledby="inc-h">
+      <h2 id="inc-h">What a build includes</h2>
+      <ul>
+        <li>A mapping session first: we document the manual process as it actually runs, then decide together what should be automated — and what shouldn't</li>
+        <li>The workflows built with n8n, in your accounts and on your infrastructure, so the system is yours</li>
+        <li>A human-visible record: every automation leaves a summary or log a person can check</li>
+        <li>Shapes of work we scope often (examples, not packages): lead routing, appointment reminders, missed-call follow-up, review requests, weekly report assembly</li>
+        <li>Handover documentation: what each workflow does, what it touches, and how to change or stop it</li>
+      </ul>
+    </section>
+    <section aria-labelledby="limits-h">
+      <h2 id="limits-h">Support and limitations</h2>
+      <ul>
+        <li><strong>Automation does the scoped thing — only the scoped thing.</strong> Judgment calls stay with people; the workflow routes them there.</li>
+        <li><strong>It runs on services you hold.</strong> Your email, your calendar, your tools — accounts and any fees for them are yours, which is what makes the system yours.</li>
+        <li><strong>Services change.</strong> When a connected tool changes its interface, a workflow may need adjusting; upkeep is scoped openly, never assumed away.</li>
+        <li><strong>Priced by scope.</strong> One reminder flow and a full operations board are different builds — quoted in writing before work begins.</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="block" aria-labelledby="launch-h">
+    <h2 class="sec" id="launch-h" style="margin-top:0">What you'll need to launch</h2>
+    <ul>
+      <li><strong>Accounts for the tools being connected (required).</strong> Your email, calendar, forms, or CRM — the automation is built inside your accounts (we use n8n), so the workflows and their data stay yours.</li>
+      <li><strong>A place for the automation to run (required).</strong> Your own hosting or a provider account in your name; any subscription is paid by you to that provider and named in the scope.</li>
+      <li><strong>Integrations (scope-dependent).</strong> Some tools need a paid tier to connect; if yours does, the scope says so — with the cost — before work begins.</li>
+    </ul>
+    <p style="color:var(--ink-soft);max-width:72ch"><em>“No surprise platform costs. Before work begins, we'll explain any required third-party accounts, subscriptions, usage charges, or publishing fees. Where practical, these accounts are established in your name so you retain control.”</em></p>
+  </section>
+
+  <section class="block" aria-labelledby="pricing-h">
+    <h2 class="sec" id="pricing-h" style="margin-top:0">Pricing and ongoing costs</h2>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0 0 10px"><strong>Builds are priced by written scope</strong> — one reminder flow and a full operations board are different builds, quoted before work begins.</p><p style="color:var(--ink-soft);max-width:72ch;margin:0"><strong>Ongoing costs:</strong> your tool subscriptions and any automation hosting, paid by you to those providers. Optional upkeep from us — for when a connected service changes — is quoted openly, never assumed.</p>
+  </section>
+
+  <section class="block" aria-labelledby="own-h">
+    <h2 class="sec" id="own-h" style="margin-top:0">Ownership, handover, and support</h2>
+    <ul>
+      <li><strong>Yours:</strong> the workflows, the accounts they run in, and the data they touch. Exports of your records are available from your own tools at any time.</li>
+      <li><strong>Handover includes:</strong> documentation of each workflow — what triggers it, what it does, where its log lives — so the system can be understood and maintained without us.</li>
+      <li><strong>Scope and changes:</strong> new workflows or changed behavior are new written scopes, priced before they are built.</li>
+      <li><strong>Support.</strong> If something we delivered doesn't do what the written scope says, we fix it — that's a defect, not a new request. Anything beyond the scope is quoted in writing before work begins.</li>
+      <li><strong>If we part ways:</strong> the workflows keep running in your accounts. Nothing is hosted on our side that your business depends on.</li>
+      <li><strong>Security boundaries:</strong> the automation touches only the accounts and data named in the scope, with the permissions those tools grant — nothing broader.</li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="cta-h">
+    <div class="cta-box">
+      <h2 id="cta-h" style="font:800 1.5rem/1.15 'Archivo',sans-serif;margin:0 0 10px">Let's build yours</h2>
+      <p style="color:var(--ink-soft);max-width:65ch;margin:0 0 18px">Tell us the task your week repeats most — the one nobody should have to remember by hand. We will reply with whether automation fits, and if it does, a written scope and price before any work begins.</p>
+      <a class="btn btn-solid" href="mailto:nick@themobleygroup.com?subject=Workflow%20automation%20%E2%80%94%20inquiry">Email about workflow automation →</a>
+      <p class="small" style="margin-top:14px">Please do not send account credentials in the first email — access is arranged properly, later, if we work together.</p>
+    </div>
+  </section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-lock">
+          <span class="mono"><svg viewBox="0 0 30 26" fill="none" aria-hidden="true"><path d="M5 21V9l5.5 7L16 9v12" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5" cy="21" r="2" fill="#E8A33D"/><circle cx="16" cy="21" r="2" fill="#E8A33D"/><circle cx="10.5" cy="16" r="2" fill="#fff"/><circle cx="21" cy="6" r="1.8" fill="#fff"/><path d="M24.3 2.7a4.6 4.6 0 0 1 0 6.6" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round"/><path d="M26.9 .6a8.4 8.4 0 0 1 0 10.8" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round" opacity=".55"/></svg></span>
+          <span class="word">The Mobley Group<small>Systems · Automation · Web</small></span>
+        </div>
+        <p class="foot-tag">The Mobley Group — systems, automation, and websites for small businesses. Built in your accounts, documented, and handed over with the keys.</p>
+      </div>
+      <nav class="foot-nav" aria-label="Footer">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="catalog.html">Full catalog</a></li>
+          <li><a href="las-vegas.html">Las Vegas &amp; Henderson</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+      <div class="foot-meta">
+        Las Vegas / Henderson, Nevada<br>
+        <a href="mailto:nick@themobleygroup.com">nick@themobleygroup.com</a><br>
+        Call or text: <a href="tel:+17739696425">(773) 969-6425</a><br>
+        Mobley Labs — a Mobley Group studio
+      </div>
+    </div>
+    <div class="foot-legal">
+      <div>
+        <div class="legal-name">The Mobley Group</div>
+        <div class="legal-rule"></div>
+        <div class="legal-line">© 2026 The Mobley Group · <a href="mailto:nick@themobleygroup.com">nick@themobleygroup.com</a></div>
+      </div>
+      <div class="legal-place">Las Vegas NV</div>
+    </div>
+  </div>
+</footer>
+<div class="mobile-cta"><a href="mailto:nick@themobleygroup.com?subject=Workflow%20automation%20%E2%80%94%20inquiry">Email the studio</a><a href="catalog.html">Browse catalog</a></div>
+<script>
+'use strict';
+/* Fictional board — checkbox play only; counters move with the sample tasks. */
+let tasks=[false,true,false];
+function render(){
+ let done=tasks.filter(Boolean).length;
+ document.querySelector('#m-done').textContent=done+' of 3';
+ document.querySelector('#bar-fill').style.width=Math.round(done/3*100)+'%';
+ document.querySelector('#m-inq').textContent=tasks[0]?0:4;
+ document.querySelector('#m-rem').textContent=tasks[1]?0:3;
+ document.querySelector('#board-note').textContent=done===3
+  ? 'Board settled — in a real build, this is the record the morning leaves behind: what arrived, what ran, what a person still owns.'
+  : 'In a real build, this board is the summary your automations leave behind — so a person always sees what ran.';
+}
+document.querySelectorAll('[data-task]').forEach(cb=>cb.addEventListener('change',()=>{tasks[Number(cb.dataset.task)]=cb.checked;render()}));
+render();
+</script>
+</body></html>

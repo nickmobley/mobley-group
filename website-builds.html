@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--
+  SHOWROOM PAGE — Website Builds (Before-and-After) · Published to themobleygroup.com Oct 27, 2026.
+  Built in-house by the Fleet, Oct 27, 2026, per showroom-spec.md §4 (websites →
+  before-and-after; real approved projects separate from illustrative concepts).
+  REAL column = our own site's evolution (Wix free-tier, Oct 2026 → the current
+  fin-system site, live) — labeled real, exhibited with schematic renderings.
+  ILLUSTRATIVE column = a fictional bakery concept with the results disclaimer
+  on the surface. Nothing typed is stored or sent; inputs escaped.
+  Register: website-builds, by scope.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Builds — Before &amp; after | The Mobley Group</title>
+<meta name="description" content="Websites built in your accounts and handed over with the keys. See a real before-and-after — our own site, Wix-era to the current build — and an illustrative concept with a brand-color switcher. Priced by written scope.">
+<link rel="canonical" href="https://themobleygroup.com/website-builds.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="The Mobley Group">
+<meta property="og:title" content="Website Builds — The Mobley Group">
+<meta property="og:description" content="Before-and-after, kept honest: our own site's real evolution in one column, a labeled concept in the other.">
+<meta property="og:url" content="https://themobleygroup.com/website-builds.html"><meta property="og:image" content="https://themobleygroup.com/assets/og-image.png">
+<link rel="icon" type="image/png" href="assets/logo-monogram.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fin.css">
+<style>
+.label-chip{display:inline-flex;align-items:center;gap:8px;font:800 11px "Archivo",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);border:1.5px solid var(--teal);border-radius:999px;padding:6px 13px;background:#fff}
+.label-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.label-chip.real{color:var(--ink);border-color:var(--ink)}
+.label-chip.real::before{background:var(--ink)}
+.sample-line{font-size:13px;color:var(--mut);margin:10px 0 0}
+h2.sec{font:800 clamp(1.5rem,3vw,2.1rem)/1.15 "Archivo",sans-serif;margin:14px 0 12px;letter-spacing:-.01em}
+section.block{margin-top:clamp(48px,6vw,72px)}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.frame{border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:#fff}
+.frame .bar{display:flex;gap:6px;align-items:center;background:var(--wash,#EDF1ED);padding:9px 12px;border-bottom:1px solid var(--rule)}
+.frame .bar i{width:10px;height:10px;border-radius:50%;background:#C9CFC9;display:block}
+.frame .bar span{font-size:11.5px;color:var(--mut);margin-left:8px}
+.frame .body{padding:22px}
+.frame.before .body{background:#F4F1EA}
+.messy h4{font:700 21px Georgia,serif;margin:0 0 6px;color:#5A4632}
+.messy p{font-size:13px;color:#6B5B45;margin:0 0 8px}
+.messy .jumble{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.messy .jumble span{border:1px dashed #A08B6B;padding:4px 8px;font-size:11px;color:#6B5B45}
+.clean h4{font:800 23px "Archivo",sans-serif;margin:0 0 6px;color:var(--ink)}
+.clean p{font-size:14px;color:var(--ink-soft);margin:0 0 10px}
+.clean .next{display:inline-block;background:var(--ink);color:var(--paper);font:700 13px "Archivo",sans-serif;padding:9px 16px;border-radius:999px}
+.frame-cap{font-size:13.5px;color:var(--ink-soft);padding:14px 22px;border-top:1px solid var(--rule);background:var(--panel)}
+.switcher{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,44px);align-items:start}
+label.f{display:grid;gap:7px;font:700 13.5px "Archivo",sans-serif;margin-top:14px}
+label.f input{font:400 15.5px "Inter",sans-serif;color:var(--ink);border:1px solid #B9B9AE;border-radius:4px;background:var(--paper);padding:11px 13px;width:100%}
+label.f input:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offset:1px}
+.swatches{display:flex;gap:11px;margin-top:12px;flex-wrap:wrap}
+.swatch{width:39px;height:39px;border-radius:50%;border:4px solid white;box-shadow:0 0 0 1px #bac6c0;cursor:pointer}
+.swatch.selected{box-shadow:0 0 0 3px var(--ink)}
+.mini-site{border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:#fff}
+.mini-site .ms-head{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;background:var(--brand,#17585E);color:#fff}
+.mini-site .ms-head b{font:800 17px "Archivo",sans-serif}
+.mini-site .ms-head span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.mini-site .ms-body{padding:20px}
+.mini-site h4{font:800 21px "Archivo",sans-serif;margin:0 0 6px}
+.mini-site p{font-size:14px;color:var(--ink-soft);margin:0 0 12px}
+.mini-site .ms-btn{display:inline-block;background:var(--brand,#17585E);color:#fff;font:700 13px "Archivo",sans-serif;padding:9px 16px;border-radius:999px}
+.mode-btns{display:flex;gap:10px;margin-bottom:16px}
+.mode-btns button{font:700 13px "Archivo",sans-serif;padding:9px 16px;border-radius:999px;border:1.5px solid var(--ink);background:none;cursor:pointer}
+.mode-btns button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:42px}
+.split h2{font:800 1.5rem/1.15 "Archivo",sans-serif;margin:0 0 12px}
+.split ul{padding-left:21px}.split p,.split li{color:var(--ink-soft)}
+.cta-box{padding:clamp(26px,4vw,40px);border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+.cta-box .small{font-size:.83rem;color:var(--mut)}
+@media(max-width:860px){.ba-grid,.switcher,.split{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap masthead">
+    <a class="lockup" href="index.html" aria-label="The Mobley Group — home">
+      <span class="mono"><svg viewBox="0 0 30 26" fill="none" aria-hidden="true"><path d="M5 21V9l5.5 7L16 9v12" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5" cy="21" r="2" fill="#E8A33D"/><circle cx="16" cy="21" r="2" fill="#E8A33D"/><circle cx="10.5" cy="16" r="2" fill="#fff"/><circle cx="21" cy="6" r="1.8" fill="#fff"/><path d="M24.3 2.7a4.6 4.6 0 0 1 0 6.6" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round"/><path d="M26.9 .6a8.4 8.4 0 0 1 0 10.8" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round" opacity=".55"/></svg></span>
+      <span class="word">The Mobley Group<small>Systems · Automation · Web</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="products.html">Products</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="las-vegas.html">Las Vegas</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+      <a class="cta" href="mailto:nick@themobleygroup.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap hero">
+  <p class="eyebrow">Web services · Built by Mobley Labs — a Mobley Group studio</p>
+  <h1 class="mega">A website is a first impression <span class="t">with a job to do.</span></h1>
+  <p class="lede">We build sites that say what the business does, make the next step obvious, and live in accounts the owner controls — documented, and handed over with the keys. Below: one real before-and-after, and one concept, kept in separate columns because the difference matters.</p>
+</div>
+
+<div class="wrap">
+  <!-- REAL column: our own site -->
+  <section class="block" aria-labelledby="who-h" style="margin-top:clamp(40px,5vw,64px)">
+    <h2 class="sec" id="who-h" style="margin-top:0">Who it's for — and the problem it solves</h2>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0 0 10px"><strong>Who it's for:</strong> businesses whose current site doesn't reflect the quality of their work — or whose first site needs to be built properly from the start.</p>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0"><strong>The problem:</strong> visitors judge a business in seconds. An out-of-date or confusing site quietly sends them elsewhere, and every claim on it still has to be true. A build gives you a fast, clear site you own outright — your domain, your hosting, your content decisions.</p>
+  </section>
+
+  <section class="block" aria-labelledby="real-h" style="margin-top:clamp(40px,5vw,64px)">
+    <span class="label-chip real">Real project · Our own site</span>
+    <h2 class="sec" id="real-h">Before and after: themobleygroup.com</h2>
+    <p style="color:var(--ink-soft);max-width:70ch;margin:0">Our first site was a free-tier Wix page, launched in October 2026 — a placeholder with our name on it. The current site is the rebuild: our own domain, a deliberate design system, an honest catalog, and pages like this one. The renderings below are schematic; the "after" is not a mockup — it's the site you're on, and you can inspect every page of it.</p>
+    <div class="ba-grid" style="margin-top:24px">
+      <div class="frame before messy">
+        <div class="bar"><i></i><i></i><i></i><span>BEFORE · Wix free tier · Oct 2026</span></div>
+        <div class="body">
+          <h4>The Mobley Group</h4>
+          <p>Welcome to our website! We offer many services for all your needs. Please look around and contact us for more information about anything.</p>
+          <div class="jumble"><span>Services</span><span>More services</span><span>About us</span><span>Gallery</span><span>Contact</span><span>Blog</span></div>
+          <p>Everything for everyone — and no obvious next step.</p>
+        </div>
+        <div class="frame-cap"><strong>The before, honestly:</strong> a rented subdomain, a template's voice, services listed without prices, paths, or proof.</div>
+      </div>
+      <div class="frame clean">
+        <div class="bar"><i></i><i></i><i></i><span>AFTER · themobleygroup.com · Live now</span></div>
+        <div class="body">
+          <h4>The Mobley Group</h4>
+          <p>Systems, automation, and websites for small businesses — scoped in writing, built in your accounts, handed over with the keys.</p>
+          <span class="next">See the catalog →</span>
+          <p style="margin-top:12px">Named offers. Stated prices and limits. Working demonstrations instead of adjectives.</p>
+        </div>
+        <div class="frame-cap"><strong>The after:</strong> our own domain and mail, a catalog that counts itself honestly, and a showroom that lets visitors try the work. <a href="index.html" style="color:var(--teal);font-weight:600">Start at the homepage →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ILLUSTRATIVE column: concept + switcher -->
+  <section class="block" aria-labelledby="concept-h">
+    <span class="label-chip">Illustrative Demo</span>
+    <h2 class="sec" id="concept-h">Now imagine yours: a concept, in your color</h2>
+    <p style="color:var(--ink-soft);max-width:70ch;margin:0">Sunset Crumb Bakery is fictional — a concept preview, not a client and not a project. Switch between the typical before and the kind of after we build, then put your own name and brand color on it.</p>
+    <p class="sample-line"><strong>Sample data · Explore the experience.</strong> Neither view represents measured real-world conversion results — a design concept can't, and this one doesn't pretend to.</p>
+    <div class="switcher" style="margin-top:24px">
+      <div>
+        <div class="mode-btns" role="group" aria-label="Before or after view">
+          <button id="m-before" type="button" aria-pressed="false">Before</button>
+          <button id="m-after" type="button" aria-pressed="true">After</button>
+        </div>
+        <label class="f">Your business name
+          <input id="b-name" type="text" maxlength="35" value="Sunset Crumb Bakery" autocomplete="off">
+        </label>
+        <label class="f" id="sw-label" style="margin-top:18px">Your brand color</label>
+        <div class="swatches" role="group" aria-labelledby="sw-label">
+          <button class="swatch selected" style="background:#17585E" data-color="#17585E" aria-label="Deep teal" aria-pressed="true"></button>
+          <button class="swatch" style="background:#926A38" data-color="#926A38" aria-label="Muted gold" aria-pressed="false"></button>
+          <button class="swatch" style="background:#8A3030" data-color="#8A3030" aria-label="Brick red" aria-pressed="false"></button>
+          <button class="swatch" style="background:#355B48" data-color="#355B48" aria-label="Forest green" aria-pressed="false"></button>
+          <button class="swatch" style="background:#0F172A" data-color="#0F172A" aria-label="Ink navy" aria-pressed="false"></button>
+        </div>
+        <p class="sample-line" style="margin-top:16px">Nothing you type is submitted or stored — the preview changes only on this page.</p>
+      </div>
+      <div class="mini-site" id="mini" style="--brand:#17585E">
+        <div class="ms-head"><b id="ms-name">Sunset Crumb Bakery</b><span id="ms-tag">Concept preview · Illustrative</span></div>
+        <div class="ms-body" id="ms-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="split block">
+    <section aria-labelledby="inc-h">
+      <h2 id="inc-h">What a build includes</h2>
+      <ul>
+        <li>A written scope: the pages, the structure, and what is not included — priced before work begins</li>
+        <li>Design in your brand, built mobile-first (your visitors are on phones)</li>
+        <li>The site on your domain, in accounts you control — never held hostage by ours</li>
+        <li>The essentials done properly: contact paths that work, basic search setup, an honest catalog of what you offer</li>
+        <li>Handover documentation: what was built, where it lives, how to change it</li>
+      </ul>
+    </section>
+    <section aria-labelledby="limits-h">
+      <h2 id="limits-h">Support and limitations</h2>
+      <ul>
+        <li><strong>Design is not traffic.</strong> A clear site makes the next step easy; it doesn't manufacture visitors, and we won't promise rankings or conversion numbers.</li>
+        <li><strong>Your content decisions are yours.</strong> Wording about your business — its claims, its prices, its story — is approved by you before it publishes.</li>
+        <li><strong>Revisions are bounded, in writing.</strong> Your scope includes a set number of revision rounds per page. Rounds beyond it are quoted before the work — never billed silently.</li>
+        <li><strong>Accessibility scope.</strong> Builds follow our standing standard: semantic structure, contrast-checked colors, visible keyboard focus, and layouts that hold up on phones and at enlarged text sizes. A formal accessibility audit against a named standard is a separate scope.</li>
+        <li><strong>Priced by scope.</strong> A one-page presence and a full catalog site are different builds; the scope says which one you're getting, in writing.</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="block" aria-labelledby="launch-h">
+    <h2 class="sec" id="launch-h" style="margin-top:0">What you'll need to launch</h2>
+    <ul>
+      <li><strong>A domain name (required).</strong> Registered in your name, paid by you to your registrar — typically a modest yearly fee.</li>
+      <li><strong>Hosting (required).</strong> A hosting account in your name. Some builds run on no-cost static hosting; your scope names the host and any cost before work begins.</li>
+      <li><strong>Your content (required).</strong> The words and images about your business, approved by you — we can help shape them, and nothing publishes without your approval.</li>
+      <li><strong>Optional integrations (scope-dependent).</strong> Booking, forms, payments, or an assistant like ours — each named in the scope with any third-party cost stated.</li>
+    </ul>
+    <p style="color:var(--ink-soft);max-width:72ch"><em>“No surprise platform costs. Before work begins, we'll explain any required third-party accounts, subscriptions, usage charges, or publishing fees. Where practical, these accounts are established in your name so you retain control.”</em></p>
+  </section>
+
+  <section class="block" aria-labelledby="pricing-h">
+    <h2 class="sec" id="pricing-h" style="margin-top:0">Pricing and ongoing costs</h2>
+    <p style="color:var(--ink-soft);max-width:72ch;margin:0 0 10px"><strong>Builds are priced by written scope</strong> — pages, features, and integrations named before work begins.</p><p style="color:var(--ink-soft);max-width:72ch;margin:0"><strong>Ongoing costs are yours and small:</strong> domain renewal and any hosting fee, paid by you to those providers. Optional ongoing maintenance from us is quoted separately, in writing.</p>
+  </section>
+
+  <section class="block" aria-labelledby="own-h">
+    <h2 class="sec" id="own-h" style="margin-top:0">Ownership, handover, and support</h2>
+    <ul>
+      <li><strong>Yours:</strong> the domain, the hosting account, the site files, and the content. We build in your accounts, so there is nothing to transfer at the end — it was never held anywhere else.</li>
+      <li><strong>Handover includes:</strong> the live site, its source files, and a short guide to routine updates (text, images, hours) so you're not dependent on us for small changes.</li>
+      <li><strong>Scope and changes:</strong> work beyond the written scope is quoted and approved before it is done.</li>
+      <li><strong>Support.</strong> If something we delivered doesn't do what the written scope says, we fix it — that's a defect, not a new request. Anything beyond the scope is quoted in writing before work begins.</li>
+      <li><strong>If we part ways:</strong> your site keeps running on your domain and hosting. Licensed fonts or stock assets stay under their own licenses, which the handover guide lists.</li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="cta-h">
+    <div class="cta-box">
+      <h2 id="cta-h" style="font:800 1.5rem/1.15 'Archivo',sans-serif;margin:0 0 10px">Let's build yours</h2>
+      <p style="color:var(--ink-soft);max-width:65ch;margin:0 0 18px">Tell us your business, what your site needs to do, and what you're using today. We will reply with whether a rebuild is the right spend — and if it is, a written scope and price before any work begins.</p>
+      <a class="btn btn-solid" href="mailto:nick@themobleygroup.com?subject=Website%20build%20%E2%80%94%20inquiry">Email about a website →</a>
+      <p class="small" style="margin-top:14px">Please do not send account credentials in the first email — access is arranged properly, later, if we work together.</p>
+    </div>
+  </section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-lock">
+          <span class="mono"><svg viewBox="0 0 30 26" fill="none" aria-hidden="true"><path d="M5 21V9l5.5 7L16 9v12" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5" cy="21" r="2" fill="#E8A33D"/><circle cx="16" cy="21" r="2" fill="#E8A33D"/><circle cx="10.5" cy="16" r="2" fill="#fff"/><circle cx="21" cy="6" r="1.8" fill="#fff"/><path d="M24.3 2.7a4.6 4.6 0 0 1 0 6.6" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round"/><path d="M26.9 .6a8.4 8.4 0 0 1 0 10.8" stroke="#9FD3D6" stroke-width="1.9" stroke-linecap="round" opacity=".55"/></svg></span>
+          <span class="word">The Mobley Group<small>Systems · Automation · Web</small></span>
+        </div>
+        <p class="foot-tag">The Mobley Group — systems, automation, and websites for small businesses. Built in your accounts, documented, and handed over with the keys.</p>
+      </div>
+      <nav class="foot-nav" aria-label="Footer">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="catalog.html">Full catalog</a></li>
+          <li><a href="las-vegas.html">Las Vegas &amp; Henderson</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+      <div class="foot-meta">
+        Las Vegas / Henderson, Nevada<br>
+        <a href="mailto:nick@themobleygroup.com">nick@themobleygroup.com</a><br>
+        Call or text: <a href="tel:+17739696425">(773) 969-6425</a><br>
+        Mobley Labs — a Mobley Group studio
+      </div>
+    </div>
+    <div class="foot-legal">
+      <div>
+        <div class="legal-name">The Mobley Group</div>
+        <div class="legal-rule"></div>
+        <div class="legal-line">© 2026 The Mobley Group · <a href="mailto:nick@themobleygroup.com">nick@themobleygroup.com</a></div>
+      </div>
+      <div class="legal-place">Las Vegas NV</div>
+    </div>
+  </div>
+</footer>
+<div class="mobile-cta"><a href="mailto:nick@themobleygroup.com?subject=Website%20build%20%E2%80%94%20inquiry">Email the studio</a><a href="catalog.html">Browse catalog</a></div>
+<script>
+'use strict';
+function escapeHTML(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+let mode='after',color='#17585E';
+function render(){
+ let name=(document.querySelector('#b-name').value||'Sunset Crumb Bakery').trim();
+ document.querySelector('#ms-name').textContent=name;
+ let mini=document.querySelector('#mini');mini.style.setProperty('--brand',color);
+ document.querySelector('#ms-body').innerHTML = mode==='before'
+  ? `<h4 style="font:700 20px Georgia,serif;color:#5A4632">Welcome to our website!!</h4><p>We are a bakery that does many things. Cakes, bread, parties, wholesale, and more — please browse our pages to find what you need, or call for information.</p><p style="font-size:12.5px;color:#8a7a5f">Home · About · Products · Services · Gallery · News · Contact · FAQ</p><p style="font-size:12.5px;color:#8a7a5f">The visitor's question — "can I order a cake for Saturday?" — is in there somewhere.</p>`
+  : `<h4>${escapeHTML(name)}</h4><p>Custom cakes and daily bread in Henderson. Order by Thursday for Saturday pickup.</p><span class="ms-btn">Order a cake →</span><p style="margin-top:12px;font-size:13px">One offer, one next step, readable on a phone in the bakery line.</p>`;
+ document.querySelector('#m-before').setAttribute('aria-pressed',String(mode==='before'));
+ document.querySelector('#m-after').setAttribute('aria-pressed',String(mode==='after'));
+}
+document.querySelector('#m-before').addEventListener('click',()=>{mode='before';render()});
+document.querySelector('#m-after').addEventListener('click',()=>{mode='after';render()});
+document.querySelector('#b-name').addEventListener('input',render);
+document.querySelectorAll('.swatch').forEach(b=>b.addEventListener('click',()=>{color=b.dataset.color;document.querySelectorAll('.swatch').forEach(v=>{v.classList.toggle('selected',v===b);v.setAttribute('aria-pressed',v===b?'true':'false')});render()}));
+render();
+</script>
+</body></html>
