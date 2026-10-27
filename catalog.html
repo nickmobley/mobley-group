@@ -10,24 +10,25 @@
 <link rel="icon" type="image/png" href="assets/logo-monogram.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="fin.css">
 <style>
 .catalog-intro{padding:26px 0 10px}.catalog-intro p{max-width:72ch;color:var(--ink-soft)}
 .catalog-nav{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 10px}
-.catalog-nav a{display:inline-block;padding:9px 16px;border-radius:999px;background:var(--sage);font-weight:700;text-decoration:none}
+.catalog-nav a{display:inline-block;padding:9px 18px;border-radius:999px;border:1.5px solid var(--ink);font-family:"Archivo",sans-serif;font-weight:700;font-size:14.5px;text-decoration:none}
+.catalog-nav a:hover{border-color:var(--teal);color:var(--teal)}
 .catalog-group{padding:44px 0 10px;scroll-margin-top:90px}
-.catalog-group h2{font:800 clamp(1.45rem,3vw,2rem)/1.15 "Archivo",sans-serif;margin-bottom:20px}
+.catalog-group h2{font:800 clamp(1.45rem,3vw,2rem)/1.15 "Archivo",sans-serif;margin-bottom:20px;letter-spacing:-.01em}
 .catalog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
-.catalog-card{display:flex;flex-direction:column;gap:11px;padding:24px;background:#fff;border:1px solid var(--grid);border-radius:18px;box-shadow:var(--shadow);scroll-margin-top:105px}
+.catalog-card{display:flex;flex-direction:column;gap:11px;padding:24px;background:var(--panel);border:1px solid var(--rule);border-radius:6px;scroll-margin-top:105px}
 .catalog-card h3{font:800 1.15rem/1.25 "Archivo",sans-serif}
 .catalog-card p{font-size:.93rem;color:var(--ink-soft)}
 .catalog-card .audience{color:var(--ink);font-weight:600}
 .catalog-card .specifics{font-size:.84rem}
-.catalog-card a{margin-top:auto;padding-top:8px;font-weight:700;text-decoration:none}
+.catalog-card a{margin-top:auto;padding-top:8px;font-weight:700;text-decoration:none;color:var(--teal)}
 .catalog-card a:hover{text-decoration:underline}
 .catalog-meta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;font-weight:700;font-size:.68rem}
-.catalog-note{margin:46px 0 68px;padding:24px;background:var(--sage);border-left:4px solid var(--teal);border-radius:12px;color:var(--ink-soft)}
-.catalog-note a{font-weight:700}
+.catalog-note{margin:46px 0 68px;padding:24px;background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--teal);border-radius:6px;color:var(--ink-soft)}
+.catalog-note a{font-weight:700;color:var(--teal)}
 @media(max-width:620px){.catalog-group{padding:34px 0 10px}.catalog-card{padding:20px}}
 </style>
 </head><body>
@@ -51,10 +52,10 @@
   </div>
 </header>
 <main id="main">
-<div class="page-hero"><div class="wrap"><span class="pill"><span class="dot"></span> The Mobley Group · Catalog</span>
-<h1>Find the work or tool <span class="t">you actually need.</span></h1>
+<div class="wrap hero"><p class="eyebrow">The Mobley Group · Catalog</p>
+<h1 class="mega">Find the work or tool <span class="t">you actually need.</span></h1>
 <p class="lede">Services start with a written scope. Digital products show a fixed price and take you to their Gumroad listing. Pick the problem first; each card tells you what happens next.</p>
-</div></div>
+</div>
 <div class="wrap catalog-intro"><nav class="catalog-nav" aria-label="Catalog sections"><a href="#services">Services</a><a href="#privacy">Personal privacy</a><a href="#field-services">Field services</a><a href="#creator">Creator pilot</a><a href="#products">Digital products</a><a href="catalog.json">Agent-readable data</a></nav><p>Our public list has seven scoped business services, one personal privacy service, one field service, and one creator operations pilot. The nine digital products are live. A pilot inquiry is a conversation about fit and scope, not a promise that a full management operation is already running.</p></div>
 <div class="wrap">
 <div id="services"><section class="catalog-group" aria-labelledby="service-services-for-small-businesses"><h2 id="service-services-for-small-businesses">Services for small businesses</h2><div class="catalog-grid"><article class="catalog-card" id="voice-receptionist">
