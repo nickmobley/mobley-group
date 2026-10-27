@@ -157,6 +157,27 @@
       "url": "https://themobleygroup.com/privacy-cleanup.html"
     },
     {
+      "id": "smart-remote-hands",
+      "name": "Smart remote hands",
+      "status": "available_by_scope",
+      "group": "Field services",
+      "audience": "Teams with equipment in Las Vegas-area facilities who need trusted on-site hands",
+      "outcome": "Scheduled on-site work performed to scope and returned with a photo-verified report.",
+      "includes": [
+        "Rack & stack, structured cabling, and patching",
+        "Drive, memory, and component swaps",
+        "Power cycling and console checks",
+        "Equipment inventory with photos",
+        "Vendor and carrier escort and meet-me support",
+        "Decommissioning pulls"
+      ],
+      "requirements": [
+        "Written scope agreed before dispatch",
+        "Site access and escort arrangements made by the client"
+      ],
+      "url": "https://themobleygroup.com/smart-hands.html"
+    },
+    {
       "id": "creator-operations",
       "name": "Creator operations, including OnlyFans",
       "status": "pilot_inquiry",

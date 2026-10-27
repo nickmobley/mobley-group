@@ -35,6 +35,7 @@
     'branding': ['logo', 'brand', 'visual identity'],
     'creator-operations': ['onlyfans', 'creator', 'subscription creator'],
     'digital-footprint-cleanup': ['remove my data', 'personal data', 'personal information', 'data broker', 'people search', 'opt out', 'search result', 'privacy', 'online footprint'],
+    'smart-remote-hands': ['smart hands', 'remote hands', 'rack and stack', 'rack & stack', 'cabling', 'data center hands', 'on-site hands', 'field engineer'],
     'job-tracker': ['job application', 'follow up', 'job tracker', 'job search'],
     'resume-it-support': ['resume', 'cover letter', 'help desk', 'it support'],
     'shipping-preflight': ['shipping', 'package', 'reseller', 'weight', 'dimensions'],
