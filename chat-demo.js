@@ -6,7 +6,7 @@
   const input = document.getElementById('catalog-assistant-input');
   const log = document.getElementById('catalog-assistant-log');
   const samples = document.querySelectorAll('[data-demo-question]');
-  const catalog = fetch('catalog.json', { credentials: 'omit' })
+  const catalog = fetch('catalog.json?v=2026-10-27-privacy', { credentials: 'omit', cache: 'no-store' })
     .then(r => { if (!r.ok) throw new Error('Catalog unavailable'); return r.json(); });
 
   function addMessage(text, by, link) {
