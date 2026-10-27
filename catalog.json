@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-10-27",
+  "publisher": "The Mobley Group / Mobley Labs",
+  "human_catalog_url": "https://themobleygroup.com/catalog.html",
+  "status_definitions": {
+    "live": "Public Gumroad listing checked for HTTP 200, matching title and listed price on 2026-10-27.",
+    "available_by_scope": "Public service page; work begins after written scope, prerequisites, and price are agreed.",
+    "pilot_inquiry": "New service inquiry; capabilities and delivery are scoped before any commitment."
+  },
+  "agent_use": "Research and recommend by fit. These downloads are not agent-callable APIs; purchasing requires the customer's approval. Services are inquiries, not instant fulfillment.",
+  "services": [
+    {
+      "id": "voice-receptionist",
+      "name": "AI voice receptionist",
+      "status": "available_by_scope",
+      "group": "Small business",
+      "audience": "Businesses that miss calls while working or after hours",
+      "outcome": "Answer common questions, capture messages, and route booking requests.",
+      "includes": [
+        "Approved call script",
+        "Calendar or message handoff",
+        "Call summary and transcript"
+      ],
+      "requirements": [
+        "Business phone setup",
+        "Approved answers and escalation rules"
+      ],
+      "url": "https://themobleygroup.com/services.html#voice-receptionist"
+    },
+    {
+      "id": "n8n-automation",
+      "name": "Workflow automation",
+      "status": "available_by_scope",
+      "group": "Small business",
+      "audience": "Teams moving leads or records between tools by hand",
+      "outcome": "Move a defined process across existing apps with visible error handling.",
+      "includes": [
+        "Process map",
+        "n8n workflow in your accounts",
+        "Failure alerts and handover notes"
+      ],
+      "requirements": [
+        "Access to the tools being connected",
+        "One agreed process to automate"
+      ],
+      "url": "https://themobleygroup.com/services.html#n8n-automation"
+    },
+    {
+      "id": "missed-call-text-back",
+      "name": "Missed-call recovery",
+      "status": "available_by_scope",
+      "group": "Small business",
+      "audience": "Service businesses with missed inbound calls",
+      "outcome": "Acknowledge an unanswered call and route the reply to a person.",
+      "includes": [
+        "Missed-call trigger",
+        "Text-back and reply routing",
+        "Test calls and failure checks"
+      ],
+      "requirements": [
+        "Compatible business phone and SMS setup",
+        "Approved copy and contact practices"
+      ],
+      "url": "https://themobleygroup.com/services.html#missed-call-text-back"
+    },
+    {
+      "id": "website-builds",
+      "name": "Website builds",
+      "status": "available_by_scope",
+      "group": "Small business",
+      "audience": "Businesses that need a clear site they control",
+      "outcome": "Publish a mobile-ready site with a clear contact path.",
+      "includes": [
+        "Written scope and copy review",
+        "Responsive pages",
+        "Domain and account handover"
+      ],
+      "requirements": [
+        "Business facts and approvals",
+        "Domain or domain plan"
+      ],
+      "url": "https://themobleygroup.com/services.html#website-builds"
+    },
+    {
+      "id": "social-media-management",
+      "name": "Social media management",
+      "status": "available_by_scope",
+      "group": "Small business",
+      "audience": "Businesses that need consistent, approved posts",
+      "outcome": "Plan, publish, and report on a repeatable content calendar.",
+      "includes": [
+        "Monthly content plan",
+        "Posts from approved source material",
+        "Monthly activity and response report"
+      ],
+      "requirements": [
+        "Brand material",
+        "Platform access and approval rules"
+      ],
+      "url": "https://themobleygroup.com/services.html#social-media-management"
+    },
+    {
+      "id": "branding",
+      "name": "Brand identity",
+      "status": "available_by_scope",
+      "group": "Small business",
+      "audience": "Businesses needing consistent visual assets",
+      "outcome": "Create usable identity files for web, print, and social channels.",
+      "includes": [
+        "Logo and wordmark",
+        "Color and type system",
+        "Reusable social assets"
+      ],
+      "requirements": [
+        "Business name and positioning",
+        "Review and approval of design direction"
+      ],
+      "url": "https://themobleygroup.com/services.html#branding"
+    },
+    {
+      "id": "creator-operations",
+      "name": "Creator operations, including OnlyFans",
+      "status": "pilot_inquiry",
+      "group": "Creator pilot",
+      "audience": "Adult creators who want help organizing their business",
+      "outcome": "Make planning, publishing handoffs, reporting, and account practices more manageable.",
+      "includes": [
+        "Creator-approved content calendar",
+        "Asset and workflow organization",
+        "Performance report and handover plan"
+      ],
+      "requirements": [
+        "Adult creator participation and written scope",
+        "Creator control of account, content, and access"
+      ],
+      "url": "mailto:nick@themobleygroup.com?subject=Creator%20operations%20pilot%20inquiry"
+    }
+  ],
+  "products": [
+    {
+      "id": "dc-tech-ops",
+      "name": "DC Tech Ops Pack",
+      "status": "live",
+      "group": "Work and career",
+      "audience": "IT operations teams and technicians",
+      "outcome": "Four n8n runbooks for alert triage, checks, digests, and handoffs.",
+      "format": "Workflow files and setup notes",
+      "price_usd": 39,
+      "url": "https://nickmobley.gumroad.com/l/xoeod"
+    },
+    {
+      "id": "resume-it-support",
+      "name": "Resume + Cover Letter Template Pack",
+      "status": "live",
+      "group": "Work and career",
+      "audience": "IT support and help desk job seekers",
+      "outcome": "Editable templates and section guidance for a focused application.",
+      "format": "Editable templates",
+      "price_usd": 24,
+      "url": "https://nickmobley.gumroad.com/l/xvbnee"
+    },
+    {
+      "id": "job-tracker",
+      "name": "Job Application Tracker",
+      "status": "live",
+      "group": "Work and career",
+      "audience": "People managing multiple job applications",
+      "outcome": "Keep deadlines, contacts, statuses, and follow-ups in one sheet.",
+      "format": "Spreadsheet template",
+      "price_usd": 24,
+      "url": "https://nickmobley.gumroad.com/l/job-application-tracker-template"
+    },
+    {
+      "id": "shipping-preflight",
+      "name": "Shipping Pre-Flight Template",
+      "status": "live",
+      "group": "Business and selling",
+      "audience": "Marketplace resellers",
+      "outcome": "Check photos, weight, dimensions, and packaging before printing a label.",
+      "format": "Checklist template",
+      "price_usd": 29,
+      "url": "https://nickmobley.gumroad.com/l/shipping-preflight-template"
+    },
+    {
+      "id": "briefing-engine",
+      "name": "Briefing Engine",
+      "status": "live",
+      "group": "Business and selling",
+      "audience": "People turning reading lists into decisions",
+      "outcome": "Turn source material into a repeatable decision briefing.",
+      "format": "n8n workflow and prompt pack",
+      "price_usd": 19,
+      "url": "https://nickmobley.gumroad.com/l/sxesa"
+    },
+    {
+      "id": "sittersheet",
+      "name": "SitterSheet",
+      "status": "live",
+      "group": "Care and routines",
+      "audience": "Babysitters and nannies",
+      "outcome": "Log a child's day and share an end-of-shift report with parents.",
+      "format": "Android and web app files",
+      "price_usd": 14.99,
+      "url": "https://nickmobley.gumroad.com/l/sittersheet"
+    },
+    {
+      "id": "28-day-reset",
+      "name": "The 28-Day Reset",
+      "status": "live",
+      "group": "Care and routines",
+      "audience": "People building simple daily routines",
+      "outcome": "Track one small morning, daytime, and evening action.",
+      "format": "42-page printable PDF",
+      "price_usd": 18,
+      "url": "https://nickmobley.gumroad.com/l/28-day-reset"
+    },
+    {
+      "id": "homelab-gateway",
+      "name": "Homelab Gateway Pack",
+      "status": "live",
+      "group": "Home and private systems",
+      "audience": "Self-hosted homelab operators",
+      "outcome": "Four n8n workflows for phone-triggered controls and uptime alerts.",
+      "format": "Workflow files and setup guide",
+      "price_usd": 19,
+      "url": "https://nickmobley.gumroad.com/l/kigfmg"
+    },
+    {
+      "id": "private-twin",
+      "name": "Private Twin Kit",
+      "status": "live",
+      "group": "Home and private systems",
+      "audience": "People setting up a local AI workspace",
+      "outcome": "Organize private notes, prompts, and ground rules for a personal assistant.",
+      "format": "Setup kit and templates",
+      "price_usd": 35,
+      "url": "https://nickmobley.gumroad.com/l/xejjtf"
+    }
+  ]
+}
