@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alert Triage Simulator — The Mobley Group</title><meta name="description" content="Practice a human-approved alert triage workflow in a safe, browser-only simulation.">
+<link rel="stylesheet" href="styles.css"><style>
+.sim{max-width:850px;margin:3rem auto;padding:0 1.25rem}.sim h1{line-height:1.1}.panel-sim{border:1px solid #b1c9ca;border-radius:16px;padding:1.5rem;margin:1rem 0;background:#f5fbfb;color:#102337}.panel-sim button{border:0;background:#17585e;color:white;padding:.85rem 1.15rem;border-radius:9px;cursor:pointer;margin:.3rem .3rem .3rem 0;font-weight:700}.panel-sim button:focus-visible{outline:3px solid #d68b25;outline-offset:3px}.panel-sim button[disabled]{opacity:.4;cursor:not-allowed}.sim pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102337;color:#e9fbf8;padding:1rem;border-radius:10px}.note{font-size:.9rem}.sim a{color:#17585e;text-decoration:underline}
+</style></head><body>
+<main class="sim"><p><a href="services.html#n8n-automation">← Services</a></p>
+<p class="eyebrow">Free interactive proof · about 3 minutes</p><h1>Alert Triage Simulator</h1>
+<p>See how a single n8n-style alert can move through validation, human approval, and evidence capture. This is a <strong>local browser simulation</strong>, not a connection to n8n, monitoring infrastructure, SSH, or any production action runtime.</p>
+<section class="panel-sim" aria-labelledby="scenario"><h2 id="scenario">Scenario: production CPU alert</h2><p>Monitoring reports CPU above 95% for 5 minutes on <code>web-02</code>. Your task is to decide whether the evidence supports escalation.</p>
+<div id="stage" role="status" aria-live="polite"><strong>Step 1:</strong> Inspect the alert before acting.</div><div id="actions"><button id="inspect">Inspect sample alert</button></div>
+<pre id="evidence" aria-label="Simulated execution evidence">No simulation steps recorded yet.</pre><button id="reset" type="button">Restart simulation</button></section>
+<p class="note"><strong>Safety boundary:</strong> A matching alert pattern is never permission to restart a server. A real workflow must validate the asset, telemetry, approved maintenance rules, and human authorization before any state-changing tool can run.</p>
+<p>Want reusable workflows instead of a toy demonstration? <a href="https://nickmobley.gumroad.com/l/xoeod">Explore the $39 DC Tech Ops Pack</a>, or <a href="mailto:nick@themobleygroup.com?subject=Single-Process%20n8n%20Build%20inquiry">request a $495 fixed-scope n8n starter</a>. Any build requires a mutually agreed written scope and access prerequisites.</p>
+</main><script>
+(function(){
+const stage=document.getElementById('stage'), actions=document.getElementById('actions'), log=document.getElementById('evidence');
+let records=[];
+function record(s){records.push(s);log.textContent=records.join('\n');}
+function buttons(items){actions.replaceChildren();items.forEach(([label,fn])=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',fn);actions.appendChild(b);});}
+function reset(){records=[];log.textContent='No simulation steps recorded yet.';stage.innerHTML='<strong>Step 1:</strong> Inspect the alert before acting.';buttons([['Inspect sample alert',inspect]]);}
+function inspect(){record('SIMULATED | alert=CPU_HIGH | asset=web-02 | avg_cpu=96% | duration=5m');stage.innerHTML='<strong>Step 2:</strong> Validate inventory and repeat telemetry. A single alert is not enough.';buttons([['Validate sample evidence',validate],['Escalate for human review',escalate]]);}
+function validate(){record('SIMULATED | inventory=matched | repeat_cpu=42% | source=sample telemetry');stage.innerHTML='<strong>Step 3:</strong> CPU is normal on repeat check. Avoid an unnecessary restart.';buttons([['Close as recovered with evidence',close],['Escalate anyway',escalate]]);}
+function close(){record('SIMULATED | decision=recovered | action=none | operator_approval=not_required');stage.innerHTML='<strong>Complete:</strong> No infrastructure action was executed. Evidence was recorded in this browser only.';buttons([['Run again',reset]]);}
+function escalate(){record('SIMULATED | escalation=human_review | action=none | approval=pending');stage.innerHTML='<strong>Complete:</strong> Alert passed to a human. No infrastructure action was executed or authorized.';buttons([['Run again',reset]]);}
+document.getElementById('reset').addEventListener('click',reset);reset();
+})();
+</script></body></html>
