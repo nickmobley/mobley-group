@@ -40,7 +40,7 @@ header.site-head{position:sticky;top:0;background:rgba(250,250,247,.9);backdrop-
 nav.main-nav{display:flex;gap:26px;align-items:center}
 nav.main-nav a{color:var(--ink-soft);text-decoration:none;font-size:.86rem;font-weight:500;padding-bottom:3px;border-bottom:2px solid transparent;transition:color .2s}
 nav.main-nav a:hover{color:var(--teal)}
-nav.main-nav a[aria-current="page"]{color:var(--teal);font-weight:600;border-bottom-color:#E8A33D}
+nav.main-nav a[aria-current="page"]{color:var(--teal);font-weight:600;border-bottom-color:var(--teal)}
 nav.main-nav a.cta{background:var(--ink);color:#fff;padding:11px 20px;border-radius:999px;font-weight:600;border-bottom:none}
 nav.main-nav a.cta:hover{background:var(--teal);color:#fff}
 
@@ -64,8 +64,8 @@ h1{font-family:"Archivo",sans-serif;font-weight:900;font-size:clamp(2.55rem,6.4v
 h1 .t{color:var(--teal)}
 .lede{margin-top:26px;max-width:38em;font-size:1.07rem;color:var(--ink-soft)}
 .specrow{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--grid);border-radius:16px;background:#fff;overflow:hidden;box-shadow:var(--shadow);max-width:820px}
-.specrow div{padding:16px 22px;border-right:1px solid var(--grid)}
-.specrow div:last-child{border-right:none}
+.specrow>div{padding:16px 22px;border-right:1px solid var(--grid)}
+.specrow>div:last-child{border-right:none}
 .specrow .k{font-size:.62rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--teal)}
 .specrow .v{font-family:"Archivo",sans-serif;font-weight:700;font-size:.98rem;margin-top:4px}
 .hero-cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
@@ -107,6 +107,13 @@ h1 .t{color:var(--teal)}
 .scene-wave .wl{font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);line-height:1.7}
 .scene-wave .wl b{display:block;color:var(--ink)}
 .scene-cap{margin-top:16px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);text-align:right}
+/* Caption sits in the clear band left of the floating phone (desktop scene):
+   capped width + right offset so the text wraps instead of running under
+   the phone and off the scene's right edge. Mobile keeps the base rule —
+   there the phone is in flow and the caption already wraps clear. */
+@media (min-width:621px){
+  .scene-cap{max-width:400px;margin-left:auto;margin-right:285px}
+}
 
 /* ---------- demo band: automation flow ---------- */
 .demo-band{background:radial-gradient(620px 320px at 0% 0%,rgba(23,88,94,.08),transparent 55%),radial-gradient(520px 300px at 100% 100%,rgba(232,163,61,.07),transparent 55%),#fff;border-bottom:1px solid var(--grid);padding:72px 0}
@@ -298,8 +305,8 @@ footer{background:var(--ink);color:#fff;padding:66px 0 46px;border-radius:34px 3
   .scene-phone{position:relative;right:auto;top:auto;width:232px;margin:-24px auto 0;transform:rotate(0deg)}
   .scene-wave{position:relative;left:auto;bottom:auto;margin-top:16px;width:fit-content}
   .specrow{grid-template-columns:1fr}
-  .specrow div{border-right:none;border-bottom:1px solid var(--grid)}
-  .specrow div:last-child{border-bottom:none}
+  .specrow>div{border-right:none;border-bottom:1px solid var(--grid)}
+  .specrow>div:last-child{border-bottom:none}
   .bento,.prod-strip,.prod-grid{grid-template-columns:1fr}
   .svc.wide,.standard{grid-column:span 1}
   .foot-meta{text-align:left}
@@ -311,3 +318,21 @@ footer{background:var(--ink);color:#fff;padding:66px 0 46px;border-radius:34px 3
   .page-hero{padding:48px 0 42px}
   .svc-list{padding:44px 0 52px}
 }
+
+/* --- conversion layer (2026-10-27) --- */
+.find-us{max-width:1100px;margin:0 auto;padding:14px 20px 22px;text-align:center;font-size:.95rem;opacity:.85}
+.find-us a{text-decoration:underline}
+.mobile-cta{display:none}
+@media (max-width:640px){
+  .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#0D1B2E;padding:10px 12px;gap:10px}
+  .mobile-cta a{flex:1;text-align:center;padding:10px 6px;border:1px solid #17585E;border-radius:8px;color:#fff;text-decoration:none;font-weight:600}
+  body{padding-bottom:64px}
+}
+.scope-form-wrap{max-width:720px;margin:48px auto;padding:0 20px}
+.scope-form-wrap form{display:grid;gap:12px}
+.scope-form-wrap input,.scope-form-wrap textarea{width:100%;padding:10px;border:1px solid #b9c4cf;border-radius:8px;font:inherit}
+.scope-form-wrap button{padding:12px 18px;border:0;border-radius:8px;background:#17585E;color:#fff;font-weight:700;cursor:pointer}
+
+.proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:18px}
+.proof-grid article{border:1px solid #d7dee6;border-radius:12px;padding:18px}
+.proof-work{max-width:1100px;margin:48px auto;padding:0 20px}
