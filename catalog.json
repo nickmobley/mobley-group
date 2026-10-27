@@ -47,6 +47,25 @@
       "url": "https://themobleygroup.com/services.html#n8n-automation"
     },
     {
+      "id": "ai-website-assistant",
+      "name": "AI website assistant",
+      "status": "available_by_scope",
+      "group": "Small business",
+      "audience": "Businesses whose visitors have repeated questions before contacting them",
+      "outcome": "Answer from approved business information, guide visitors to the right next step, and hand uncertain questions to a person.",
+      "includes": [
+        "Approved knowledge and answer boundaries",
+        "Website chat interface",
+        "Human handoff and test cases"
+      ],
+      "requirements": [
+        "Current business facts and FAQs",
+        "Agreed privacy and handoff rules",
+        "Client-owned model or hosting account"
+      ],
+      "url": "https://themobleygroup.com/services.html#ai-website-assistant"
+    },
+    {
       "id": "missed-call-text-back",
       "name": "Missed-call recovery",
       "status": "available_by_scope",
