@@ -13,29 +13,27 @@
 <link rel="icon" type="image/png" href="assets/logo-monogram.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="fin.css">
 <style>
-.hands-page{padding:48px 0 76px}
-.hands-page h2{font:800 clamp(1.5rem,3vw,2.1rem)/1.15 "Archivo",sans-serif;margin-bottom:15px}
+.hands-page{padding:10px 0 76px}
+.hands-page h2{font:800 clamp(1.5rem,3vw,2.1rem)/1.15 "Archivo",sans-serif;margin-bottom:15px;letter-spacing:-.01em}
 .hands-page p,.hands-page li{color:var(--ink-soft)}
-.hands-page a{font-weight:700}
+.hands-page a{font-weight:700;color:var(--teal)}
 .hands-lead{max-width:70ch;font-size:1.07rem}
 .hands-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:26px 0 58px}
-.hands-step{padding:25px;border:1px solid var(--grid);border-radius:17px;background:#fff;box-shadow:var(--shadow)}
+.hands-step{padding:25px;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
 .hands-step .number{display:inline-block;color:var(--teal);font:800 .75rem "Archivo",sans-serif;letter-spacing:.15em;margin-bottom:16px}
 .hands-step h3{font:800 1.12rem/1.2 "Archivo",sans-serif;margin-bottom:10px}
-.hands-note{padding:28px;border-radius:18px;background:var(--sage);border-left:5px solid var(--teal);margin-bottom:54px}
+.hands-note{padding:28px;border-radius:6px;background:var(--panel);border:1px solid var(--rule);border-left:5px solid var(--teal);margin-bottom:54px}
 .hands-note ul{margin:15px 0 0;padding-left:21px}
 .hands-split{display:grid;grid-template-columns:1fr 1fr;gap:42px;margin-bottom:58px}
 .hands-split h2{font-size:1.5rem}.hands-split ul{padding-left:21px}
-.hands-cta{padding:36px;border-radius:22px;background:#0D1B2E;color:#fff}
-.hands-cta h2,.hands-cta p{color:#fff}
-.hands-cta a{display:inline-block;margin-top:13px;padding:12px 20px;background:#fff;color:#0D1B2E;border-radius:10px;text-decoration:none}
-.hands-cta .small{font-size:.83rem;opacity:.85}
+.hands-cta{padding:clamp(26px,4vw,40px);border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+.hands-cta .small{font-size:.83rem;color:var(--mut)}
 .hands-faq{margin:54px 0 0;max-width:78ch}
 .hands-faq h3{font:800 1.08rem "Archivo",sans-serif;margin:25px 0 7px}
 .hands-faq p{margin:0}
-@media(max-width:740px){.hands-steps,.hands-split{grid-template-columns:1fr}.hands-page{padding:36px 0 55px}}
+@media(max-width:740px){.hands-steps,.hands-split{grid-template-columns:1fr}.hands-page{padding:6px 0 55px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Smart Remote Hands","serviceType":"Smart hands and remote hands field services","description":"Scheduled on-site hands in Las Vegas-area data centers and offices: rack and stack, cabling, component swaps, power cycling, console checks, vendor escort, and photo-verified completion reports.","provider":{"@type":"ProfessionalService","name":"The Mobley Group","url":"https://themobleygroup.com/"},"url":"https://themobleygroup.com/smart-hands.html","areaServed":"Las Vegas, Henderson, and North Las Vegas, Nevada"}</script>
 </head>
@@ -61,11 +59,11 @@
 </header>
 
 <main id="main">
-<div class="page-hero"><div class="wrap">
-  <span class="pill"><span class="dot"></span> Field services · Las Vegas area</span>
-  <h1>Your equipment is in Las Vegas. <span class="t">Now your hands are too.</span></h1>
+<div class="wrap hero">
+  <p class="eyebrow">Field services · Las Vegas area</p>
+  <h1 class="mega">Your equipment is in Las Vegas. <span class="t">Now your hands are too.</span></h1>
   <p class="lede">Scheduled smart hands and remote hands for data centers and offices across Las Vegas, Henderson, and North Las Vegas — work performed to your runbook and returned with a photo-verified report.</p>
-</div></div>
+</div>
 <div class="wrap hands-page">
   <p class="hands-lead">When your gear sits in a Vegas-area facility and your team doesn't, you need hands you can trust on site. Smart hands is scheduled, scoped on-site work: send the runbook, and a working field-service engineer performs it, documents it, and hands the evidence back.</p>
   <section aria-labelledby="process-h">
@@ -105,7 +103,7 @@
   <section class="hands-cta" aria-labelledby="inquiry-h">
     <h2 id="inquiry-h">Request smart hands</h2>
     <p>Tell us the facility, the tasks, and your timing. We will reply with a written scope and price before any dispatch.</p>
-    <a href="mailto:nick@themobleygroup.com?subject=Smart%20hands%20%E2%80%94%20inquiry">Email about smart hands →</a>
+    <a class="btn btn-solid" href="mailto:nick@themobleygroup.com?subject=Smart%20hands%20%E2%80%94%20inquiry">Email about smart hands →</a>
     <p class="small">Please do not send site credentials or access codes in the first email — access is arranged after the scope is agreed.</p>
   </section>
   <section class="hands-faq" aria-labelledby="faq-h">
