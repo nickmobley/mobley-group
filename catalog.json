@@ -138,6 +138,25 @@
       "url": "https://themobleygroup.com/services.html#branding"
     },
     {
+      "id": "digital-footprint-cleanup",
+      "name": "Digital footprint cleanup",
+      "status": "available_by_scope",
+      "group": "Personal privacy",
+      "audience": "People who want to reduce public exposure of personal information",
+      "outcome": "Find public exposures, submit eligible source and search removal requests, and document what changed and what remains.",
+      "includes": [
+        "Public exposure inventory with source URLs",
+        "Data broker opt-outs and eligible source or search removal requests",
+        "Status evidence, remaining exposures, and a recheck plan"
+      ],
+      "requirements": [
+        "The person's written authorization and agreed search scope",
+        "Secure handling of identity verification through the relevant provider",
+        "No promise that public records or all internet copies can be erased"
+      ],
+      "url": "https://themobleygroup.com/services.html#digital-footprint-cleanup"
+    },
+    {
       "id": "creator-operations",
       "name": "Creator operations, including OnlyFans",
       "status": "pilot_inquiry",
