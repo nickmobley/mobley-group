@@ -356,3 +356,16 @@ footer{border-top:1px solid var(--ink);padding-top:clamp(44px,6vw,72px)}
 .mobile-menu nav a[aria-current=page]{color:var(--teal);font-weight:700}
 .mobile-menu nav a:last-child{background:var(--ink);color:white;text-align:center;font-weight:700;margin-top:6px}
 @media(max-width:1050px){.main-nav{display:none}.mobile-menu{display:block}}
+
+/* Campaign learning resource: clear, accessible type hierarchy */
+.field-guide{border-top:1px solid var(--rule)}
+.field-guide .resource-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,85px);align-items:start}
+.field-guide h2{margin-bottom:24px}
+.field-guide .resource-layout>div>p{font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:580px;margin:0 0 24px}
+.field-guide .resource-facts{background:#E8EFED;padding:clamp(24px,3vw,42px);border-radius:12px}
+.field-guide .resource-facts h3{font-size:23px}
+.field-guide ol{padding-left:22px;line-height:1.65;font-size:15.5px}
+.field-guide li{margin-bottom:12px}
+.field-guide .resource-facts p{font-size:13px;color:var(--mut);margin-top:20px}
+.field-guide .btn-secondary{font-size:14.5px}
+@media(max-width:760px){.field-guide .resource-layout{grid-template-columns:1fr}}
