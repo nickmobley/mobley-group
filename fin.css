@@ -186,14 +186,16 @@ h1,h2,h3{font-family:"Archivo",sans-serif;color:var(--ink)}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 
 /* ---------- footer ---------- */
-footer{border-top:1px solid var(--ink);padding-top:clamp(44px,6vw,72px)}
+footer{border-top:1px solid var(--ink);padding-top:clamp(44px,6vw,72px);max-width:100%;overflow-x:clip}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:36px;padding-bottom:44px}
+.foot-grid>*{min-width:0}
 .foot-lock{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.foot-tag{color:var(--mut);font-size:15px;max-width:34em;margin:0}
+.foot-tag{color:var(--mut);font-size:15px;max-width:34em;margin:0;overflow-wrap:break-word}
 .foot-nav ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.foot-nav a{text-decoration:none;font-weight:500}
+.foot-nav a{text-decoration:none;font-weight:500;overflow-wrap:break-word}
 .foot-meta{color:var(--ink-soft);font-size:15.5px;line-height:1.9}
-.foot-meta a{font-weight:600}
+.foot-meta a{font-weight:600;overflow-wrap:anywhere}
+.legal-line a{overflow-wrap:anywhere}
 .foot-legal{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;border-top:1px solid var(--rule);padding:22px 0 30px;flex-wrap:wrap}
 .legal-name{font-family:"Archivo",sans-serif;font-weight:900;font-size:22px;letter-spacing:-.01em}
 .legal-rule{display:none}
@@ -217,11 +219,21 @@ footer{border-top:1px solid var(--ink);padding-top:clamp(44px,6vw,72px)}
   }
   .mobile-cta a + a{border-left:1px solid var(--rule)}
 }
+/* narrow phones: stack the two contact-bar actions full-width so neither can be clipped */
+@media (max-width:560px){
+  body{padding-bottom:calc(112px + env(safe-area-inset-bottom, 0px))}
+  .mobile-cta{flex-direction:column}
+  .mobile-cta a{flex:none;width:100%;padding:15px 8px}
+  .mobile-cta a + a{border-left:none;border-top:1px solid var(--rule)}
+}
 
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .catalog-panel,.assist-shell,.proof-grid{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:26px;padding-bottom:32px}
+  .foot-nav ul{grid-template-columns:1fr 1fr;gap:8px 20px}
+  .foot-meta{border-top:1px solid var(--rule);padding-top:20px;line-height:1.65}
+  .foot-legal{padding:20px 0 26px}
   .limits-list li{grid-template-columns:1fr}
   .cat-list span{max-width:52%}
   .contact-row{flex-wrap:wrap;gap:6px 18px}
