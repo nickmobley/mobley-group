@@ -1,0 +1,30 @@
+name: Live site audit (read-only)
+
+on:
+  schedule:
+    - cron: '17 14 * * *'   # daily, about 6-7 AM Pacific
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static gate on the published source
+        run: node scripts/site-quality.mjs
+      - name: Audit the live site
+        run: node scripts/live-audit.mjs
+      - name: Keep the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-audit-report
+          path: live-audit-report.md
+          retention-days: 30

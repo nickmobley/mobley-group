@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <!--
-  SHOWROOM PAGE — AI Website Assistant (Shipped Product: our own live instance ·
-  on-page miniature labeled Illustrative Demo) · Published to themobleygroup.com Oct 27, 2026.
+  SHOWROOM PAGE — AI Website Assistant (on-page miniature labeled Illustrative Demo;
+  the homepage instance is retired, see the 2026-11-22 site audit) · Published to themobleygroup.com Oct 27, 2026.
   Built in-house by the Fleet, Oct 27, 2026, per the Launch Transparency
-  Standard §4/§7 + showroom-spec.md. The real assistant lives on our homepage:
+  Standard §4/§7 + showroom-spec.md. A client deployment is
   a deterministic, rules-based matcher over our public catalog — no AI model,
   no message storage. This page's miniature mirrors that mechanism on a small
-  taught set and is NOT connected to the live assistant. Input is escaped and
+  taught set and is NOT connected to any live assistant. Input is escaped and
   rendered as text. Price from the register: by scope.
 -->
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Website Assistant — The Mobley Group</title>
-<meta name="description" content="A website assistant that answers visitor questions from your approved information and points people to the right page — rules-based, taught by you, live on our own site as the working example. Set up by written scope.">
+<meta name="description" content="A website assistant that answers visitor questions from your approved information and points people to the right page — rules-based, taught by you, with a working miniature on this page. Set up by written scope.">
 <link rel="canonical" href="https://themobleygroup.com/ai-website-assistant.html">
 <meta property="og:type" content="website"><meta property="og:site_name" content="The Mobley Group">
 <meta property="og:title" content="AI Website Assistant — The Mobley Group">
-<meta property="og:description" content="Answers from your approved information, on your own site. Ours is live on our homepage — try it, then picture it taught with your catalog.">
+<meta property="og:description" content="Answers from your approved information, on your own site. Try the miniature on this page, then picture it taught with your catalog.">
 <meta property="og:url" content="https://themobleygroup.com/ai-website-assistant.html"><meta property="og:image" content="https://themobleygroup.com/assets/og-image.png">
 <link rel="icon" type="image/png" href="assets/logo-monogram.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +58,7 @@ section.block{margin-top:clamp(48px,6vw,72px)}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://themobleygroup.com/assets/og-image.png">
 <meta name="twitter:title" content="AI Website Assistant — The Mobley Group">
-<meta name="twitter:description" content="A website assistant that answers visitor questions from your approved information and points people to the right page — rules-based, taught by you, live on our own site as the working example. Set up by written scope.">
+<meta name="twitter:description" content="A website assistant that answers visitor questions from your approved information and points people to the right page — rules-based, taught by you, with a working miniature on this page. Set up by written scope.">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -86,7 +86,7 @@ section.block{margin-top:clamp(48px,6vw,72px)}
 <div class="wrap hero">
   <p class="eyebrow">Web services · Built by Mobley Labs — a Mobley Group studio</p>
   <h1 class="mega">Your site, answering questions <span class="t">while you're busy.</span></h1>
-  <p class="lede">A website assistant answers visitor questions from information you approve — your services, your prices, your policies — and points each person to the right page or the right next step. It is rules-based, not a generative AI: it says what it has been taught, and nothing more. Ours is live on our own homepage; it's the working example for this page.</p>
+  <p class="lede">A website assistant answers visitor questions from information you approve — your services, your prices, your policies — and points each person to the right page or the right next step. It is rules-based, not a generative AI: it says what it has been taught, and nothing more. The miniature on this page shows how it works.</p>
 </div>
 
 <div class="wrap">
@@ -97,18 +97,18 @@ section.block{margin-top:clamp(48px,6vw,72px)}
   </section>
 
   <section class="block" aria-labelledby="demo-h">
-    <span class="label-chip">Shipped Product · Live on our site</span>
+    <span class="label-chip">Illustrative Demo · On this page</span>
     <h2 class="sec" id="demo-h">Try the experience</h2>
     <div class="live-box">
-      <h3 style="font:800 1.15rem 'Archivo',sans-serif;margin:0 0 8px">The real one is on our homepage</h3>
-      <p style="color:var(--ink-soft);max-width:70ch;margin:0 0 16px">The assistant on themobleygroup.com is this service, deployed: it reads our public catalog, matches a question to the relevant offer, and answers with a link. It does not call an AI model and it does not store messages. Ask it about our services or products — it's a working example, not a mockup.</p>
-      <a class="btn btn-solid" href="index.html#assistant-demo">Try the live assistant on our homepage →</a>
+      <h3 style="font:800 1.15rem 'Archivo',sans-serif;margin:0 0 8px">How a client deployment works</h3>
+      <p style="color:var(--ink-soft);max-width:70ch;margin:0 0 16px">Deployed on a client's site, this service reads the business's approved catalog, matches a question to the relevant offer, and answers with a link. The rules-based version does not call an AI model and does not store messages. Try the miniature below to see the matching for yourself.</p>
+      <a class="btn btn-solid" href="#assistant-miniature">Try the miniature below ↓</a>
     </div>
-    <p class="sample-line"><strong>Sample data · Explore the experience.</strong> The miniature below shows the same mechanism on a small taught set, so you can see how matching works. It is a scripted simulation on this page only — it is not connected to the live site assistant, and nothing you type is sent or stored.</p>
-    <div class="demo-panel" style="margin-top:24px">
+    <p class="sample-line"><strong>Sample data · Explore the experience.</strong> The miniature below shows the same mechanism on a small taught set, so you can see how matching works. It is a scripted simulation on this page only, and nothing you type is sent or stored.</p>
+    <div class="demo-panel" id="assistant-miniature" style="margin-top:24px">
       <div class="chip-row">
         <span class="label-chip">Illustrative Demo · Miniature</span>
-        <span style="font-size:13px;color:var(--mut)">Rules-based matching — the same way the live one works</span>
+        <span style="font-size:13px;color:var(--mut)">Rules-based matching — the same way a client deployment works</span>
       </div>
       <div class="samples" role="group" aria-label="Sample questions">
         <button type="button" data-q="What services do you offer?">What services do you offer?</button>
@@ -230,8 +230,8 @@ section.block{margin-top:clamp(48px,6vw,72px)}
 <div class="mobile-cta"><a href="mailto:info@themobleygroup.com?subject=Website%20assistant%20%E2%80%94%20inquiry">Email the studio</a><a href="catalog.html">Browse catalog</a></div>
 <script>
 'use strict';
-/* Miniature of the live assistant's mechanism: deterministic keyword matching
-   over a small taught catalog. NOT connected to the live site assistant.
+/* Miniature of a client deployment's mechanism: deterministic keyword matching
+   over a small taught catalog. NOT connected to any live assistant.
    Input is rendered as text only; nothing is stored or sent. */
 const taught=[
  {keys:['service','services','offer','offers','do you do','what do you'],text:'We build client apps, AI voice receptionists, missed-call recovery, websites, website assistants, and workflow automation — each scoped in writing. The full list lives on the services page.',link:['services.html','See services →']},
@@ -261,6 +261,6 @@ function ask(q){
 }
 document.querySelector('#chat-form').addEventListener('submit',e=>{e.preventDefault();const i=document.querySelector('#chat-input');ask(i.value);i.value='';});
 document.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>ask(b.dataset.q)));
-addMsg('Ask me about services, apps, calls, websites, or prices — I answer from a small taught catalog, the same way the live assistant works on our homepage.','assistant');
+addMsg('Ask me about services, apps, calls, websites, or prices — I answer from a small taught catalog, the same way a client deployment would.','assistant');
 </script>
 </body></html>
